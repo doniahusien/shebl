@@ -1,8 +1,32 @@
 {
   "nav":{
-    "home":"Home",
-    "about":"About Us",
+    "contact":"Contact Us",
+    "common":"FAQ",
     "services":"Our Services",
-    "contact":"Contact Us"
+    "about":"About Us"
+  },
+   "hero": {
+    "badge": "One of the Leading Law Firms",
+    "title": "Tailored Legal Solutions for Individuals and Businesses",
+    "description": "We put our clients' interests first and strive to achieve the best possible outcomes in every case.",
+    "button": "Contact Us",
+    "note": "Don’t hesitate to request your legal consultation"
+  },
+  "highlight": {
+    "highlight1": "A team of certified and highly skilled lawyers",
+    "highlight2": "Proven legal success stories from our valued clients",
+    "highlight3": "Extensive experience across all areas of law"
+  },
+    "about": {
+    "title": "About Us",
+    "description": "Learn about our vision, mission, and values. Discover the story behind the founding of our firm and our legal journey that made us one of the leading law offices. We work with full dedication to achieve justice and serve our clients.",
+    "features": {
+      "fast_response": "Fast response and personal attention to every case",
+      "legal_procedures": "Effective legal procedures to protect your rights and interests",
+      "strong_defense": "Strong defense and innovative legal strategies",
+      "consultations": "Accurate legal consultations based on the latest laws"
+    },
+    "footer": "A wide range of legal services",
+    "button": "Learn More About Us"
   }
 }
