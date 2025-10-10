@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     {
       defaultLocale: "ar",
       langDir: "locales",
-      lazy: false,
+      lazy: true,
       locales: [
         { code: "en", file: "en.json", dir: "ltr", name: "English" },
         { code: "ar", file: "ar.json", dir: "rtl", name: "عربي" },
