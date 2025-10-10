@@ -1,6 +1,42 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@font-face {
+  font-family: "Ya Modern Pro";
+  src: url("/fonts/Ya-ModernPro-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("/fonts/DINNextLTArabic-Regular-2.ttf") format("truetype");
+  font-display: swap;
+}
+
 @theme {
-  --color-primary: #96c65f;
-  --color-accent: #00ff00; 
+  --font-ya: "Ya Modern Pro";
+ --font-din: ("DIN Next LT Arabic", sans-serif);
+  --color-primary: rgba(255, 255, 255, 1);
+  --color-secondary: rgba(204, 204, 204, 1);
+  --color-secondary-200: rgba(242, 244, 245, 1);
+  --color-primary-100: rgba(0, 0, 0, 1);
+  --color-tertiary: rgba(102, 102, 102, 1);
+  --color-nav: rgba(9, 28, 47, 0.2);
+  --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+}
+
+.font-ya {
+  font-family: var(--font-ya);
+}
+
+.font-din {
+  font-family: var(--font-din);
+}
+
+.bg-btns {
+  background: var(--gradient-btns);
+}
+
+html {
+  background-color: transparent;
 }
