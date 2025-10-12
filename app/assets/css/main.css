@@ -38,7 +38,7 @@
   --color-gold-light: #D39A6B;                     /* gradient end */
   --color-gradient-gold: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
   --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
-
+  --gradient-banner:linear-gradient(180deg, rgba(0, 28, 52, 0.9) 27.28%, rgba(0, 28, 52, 0.7) 100%);
  /*  --color-banner-heading: rgba(242, 244, 245, 1);
   --color-banner-100: rgba(179, 179, 179, 1);
   --color-banner-200: rgba(204, 204, 204, 1);
@@ -103,6 +103,9 @@
   font-family: var(--font-din);
 }
 
+.bg-banner{
+  background:var(--gradient-banner) ;
+}
 
 .bg-btns {
   background: var(--gradient-btns);
