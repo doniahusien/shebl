@@ -26,15 +26,18 @@
           }}</NuxtLink>
         </div>
         <div class="flex gap-4">
-          <a
+          <NuxtLink
             v-for="(social, index) in socialLinks"
             :key="index"
-            :href="social.href"
-            target="_blank"
+            :to="social.href"
             class="flex justify-center items-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition"
           >
-            <UIcon :name="social.icon" class="w-5 h-5 text-white" />
-          </a>
+            <BaseIcon
+              :src="social.icon"
+              wrapperClass="w-8 h-8 "
+              iconClass="w-5 h-5"
+            />
+          </NuxtLink>
         </div>
       </div>
     </UContainer>
@@ -43,17 +46,14 @@
 
 <script setup>
 const socialLinks = [
-  { icon: "i-lucide-whatsapp", href: "#" },
-  { icon: "i-lucide-twitter", href: "#" },
-  { icon: "i-lucide-instagram", href: "#" },
-  { icon: "i-lucide-facebook", href: "#" },
+  { icon: "/icons/whats.svg", href: "#" },
+  { icon: "/icons/x.svg", href: "#" },
+  { icon: "/icons/insta.svg", href: "#" },
+  { icon: "/icons/face.svg", href: "#" },
 ];
 </script>
 
 <style scoped>
-.text-gold {
-  color: #d4af37;
-}
 .text-banner-100 {
   color: #c8d1e0;
 }
