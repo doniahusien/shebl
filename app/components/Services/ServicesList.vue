@@ -1,7 +1,7 @@
 <template>
-      <div class="w-[90%] mx-auto">
+      <div class="w-[90%] h-full mx-auto">
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-stretch"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         <ServicesCard
           v-for="(key, index) in Object.keys($tm('services.items'))"
@@ -14,3 +14,6 @@
       </div>
     </div>
 </template>
+<script setup>
+const {t,tm}= useI18n()
+</script>
