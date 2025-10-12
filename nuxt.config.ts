@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ["@nuxt/image", "@nuxt/ui", [
     "@nuxtjs/i18n",
     {
@@ -14,6 +14,7 @@ export default defineNuxtConfig({
         { code: "ar", file: "ar.json", dir: "rtl", name: "عربي" },
       ],
       detectBrowserLanguage: false,
+      
     },
   ],
   ],

@@ -15,14 +15,84 @@
 
 @theme {
   --font-ya: "Ya Modern Pro";
- --font-din: ("DIN Next LT Arabic", sans-serif);
+  --font-din: "DIN Next LT Arabic";
+  --color-nav-bg: rgba(9, 28, 47, 0.2);
+  --color-nav-link: rgba(204, 204, 204, 1);
+
+  --color-black: rgb(0, 0, 0);                     /* maintitle, contact-title, card-title */
+  --color-dark-gray: rgb(25, 25, 25);              /* about-text, contact-title-center */
+  --color-gray-basic: rgb(51, 51, 51);                   /* contact-card-title */
+  --color-medium-gray: rgb(102, 102, 102);         /* highlight-text */
+  --color-light-gray: rgb(153, 153, 153);          /* why-sub, footer-subtitle */
+  --color-soft-gray: rgb(179, 179, 179);           /* about-sub, notes, services-sub, etc. */
+  --color-pale-gray: rgb(204, 204, 204);           /* banner-200 */
+  --color-silver-gray: rgb(229, 229, 229);         /* banner-300 */
+  --color-off-white: rgb(242, 242, 242);           /* faq-label, contact-card-bg */
+  --color-mist-white: rgb(242, 244, 245);          /* banner-heading, btn-bg, highlight-bg */
+  --color-cream: rgb(252, 250, 248);               /* icon-bg, service-card-bg */
+  --color-white: rgb(255, 255, 255);               /* titles, icons, sections */
+  --color-navy-overlay: rgba(0, 28, 52, 0.9);      /* faq-bg-layout */
+  --color-faded-white: rgba(255, 255, 255, 0.1);  /* faq-btn-bg */
+  --color-gold: rgb(193, 152, 119);                /* faq-btn-text */
+  --color-gold-dark: #CC966A;                      /* gradient start */
+  --color-gold-light: #D39A6B;                     /* gradient end */
+  --color-gradient-gold: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+  --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+
+ /*  --color-banner-heading: rgba(242, 244, 245, 1);
+  --color-banner-100: rgba(179, 179, 179, 1);
+  --color-banner-200: rgba(204, 204, 204, 1);
+  --color-banner-300: rgba(229, 229, 229, 1);
+
+  --color-btn-text:rgba(242,244,245,1);
+  --color-btn-bg: rgb(242,244,245);
+  --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+
+  --color-icon-bg:rgba(252,250,248,1);
+  --color-highlight-text: rgba(102, 102, 102, 1);
+  --color-highlight-bg: rgba(242, 244, 245, 1);
+
+  --color-maintitle: rgba(0,0,0,1);
+  --color-about-sub:rgba(179,179,179,1);
+  --color-about-text:rgba(25,25,25,1);
+  --color-about-notes:rgba(179,179,179,1);
+
+  --color-why-main:rgba(255,255,255,1);
+  --color-why-sub:rgba(153,153,153,1);
+  --color-why-num:rgba(179,179,179,1);
+
+  --color-services-sub:rgba(179,179,179,1);
+  --color-services-card-bg: rgba(252,250,248,1);
+  --color-services-icon-bg: white;
+  --color-services-card-title: rgba(0,0,0,1);
+  --color-services-card-subtitle: rgba(179,179,179,1);
+
+  --color-faq-bg-layout:rgba(0,28,52,0.9);
+  --color-faq-title:white;
+  --color-faq-btn-bg:rgba(255,255,255,0.14);
+  --color-faq-btn-text:rgba(193,152,119,1);
+  --color-faq-label:rgba(242,242,242,1);
+  --color-faq-contentt:rgba(179,179,179,1);
+
+
+  --color-contact-title:rgba(0,0,0,1);
+  --color-contact-sub:rgba(179,179,179,1);
+  --color-contact-title-center:rgba(25,25,25,1);
+  --color-contact-card-bg:rgba(242,242,242,1);
+  --color-contact-card-title:rgba(51,51,51,1);
+
+
+  --color-footer-title:rgba(255,255,255,1);
+  --color-footer-subtitle:rgba(153,153,153,1);
+
+
+  --color-main: rgba(0, 0, 0, 1);
+  --color-subtitle: rgba(153, 153, 153, 1);
+  --color-icon-bg: rgba(255, 255, 255, 0.13);
+
   --color-primary: rgba(255, 255, 255, 1);
   --color-secondary: rgba(204, 204, 204, 1);
-  --color-secondary-200: rgba(242, 244, 245, 1);
-  --color-primary-100: rgba(0, 0, 0, 1);
-  --color-tertiary: rgba(102, 102, 102, 1);
-  --color-nav: rgba(9, 28, 47, 0.2);
-  --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
+  --color-secondary-200: rgba(242, 244, 245, 1); */
 }
 
 .font-ya {
@@ -33,10 +103,24 @@
   font-family: var(--font-din);
 }
 
+
 .bg-btns {
   background: var(--gradient-btns);
 }
+.bg-btn-white{
+background: var(--faded-white);
+}
+.text-gold {
+  background: var(--gradient-btns);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+button{
+  font-family:var(--font-din) ;
+}
 
 html {
-  background-color: transparent;
+  background: var(--mist-white);
+  font-family:var(--font-din);
 }
