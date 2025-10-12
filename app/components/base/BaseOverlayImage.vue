@@ -1,7 +1,7 @@
 <template>
   <section
     :class="[
-      'relative p-20 gap-10 text-white bg-cover bg-center w-[90%] mx-auto rounded-2xl',
+      'relative p-5 md:p-20 gap-10 text-white bg-cover bg-center w-[90%] mx-auto rounded-2xl',
       srcImg,
     ]"
   >

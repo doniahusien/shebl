@@ -12,10 +12,10 @@ defineProps({
 <template>
   <section
     :class="[
-      'flex flex-wrap-reverse md:flex-nowrap items-center px-12 bg-mist-white relative pt-10 md:pt-0',
+      'flex flex-wrap-reverse md:flex-nowrap items-center px-5 md:px-12 bg-mist-white relative py-10 md:pt-0',
     ]"
   >
-    <div class="flex flex-col flex-wrap gap-5">
+    <div class="flex flex-col flex-wrap gap-2 md:gap-5">
       <BaseHeading :title="$t('about.title')" classes="text-black text-4xl" />
       <BaseParagraph
         :title="$t('about.description')"

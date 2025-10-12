@@ -134,7 +134,7 @@ button{
   font-family:var(--font-din) ;
 }
 
-html {
+html,body {
   background: var(--mist-white);
   font-family:var(--font-din);
 }

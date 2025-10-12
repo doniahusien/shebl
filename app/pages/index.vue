@@ -6,7 +6,10 @@
     </div>
   </section>
   <AboutUs />
-  <WhyUs />
+  <div class="bg-mist-white"> 
+   <WhyUs />
+  </div>
+
   <Services/>
   <FAQ/>
   <Contact/>
