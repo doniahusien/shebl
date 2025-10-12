@@ -54,6 +54,7 @@
   },
    "services": {
     "title": "Our Services",
+     "subtitle": "At Shibl Legal, we provide a comprehensive range of legal services tailored to meet our clients' needs. Whether you are an individual seeking legal advice or a company requiring full legal support, we are here to be your trusted legal partner.",
     "description": "At “Shibl Legal,” we offer a comprehensive range of legal services tailored to meet our clients’ needs. Whether you are an individual seeking legal advice or a company looking for complete legal support, we are here to be your trusted legal partner.",
     "items": {
       "defense": {
@@ -80,25 +81,38 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
+    "subtitle": "All the questions that come to your mind to learn more about Shibl Law Firm",
     "view_all": "View All",
     "items": [
-      {
-        "label": "What legal services does Shell Legal Company provide?",
-        "content": "We offer a wide range of legal services including legal consultations, contract drafting, court representation, company formation, commercial arbitration, and judicial execution."
-      },
-      {
-        "label": "How can I contact the Shell Legal team?",
-        "content": "You can contact us via email, phone, or by using the contact form on our website."
-      },
-      {
-        "label": "How can I book a legal consultation?",
-        "content": "You can book a legal consultation through our website by selecting a convenient time for you."
-      },
-      {
-        "label": "Do you provide legal services only for companies or also for individuals?",
-        "content": "We provide comprehensive legal services for both companies and individuals alike."
-      }
-    ]
+    {
+      "label": "What legal services does Shibl Law Firm provide?",
+      "content": "We offer a wide range of legal services including legal consultations, contract drafting, court representation, company formation, commercial arbitration, and judicial execution."
+    },
+    {
+      "label": "How can I contact the Shibl Legal team?",
+      "content": "You can contact us via email, phone, or by using the contact form on our website."
+    },
+    {
+      "label": "How can I book a legal consultation?",
+      "content": "You can book a legal consultation through our website by selecting a convenient time for you."
+    },
+    {
+      "label": "Do you provide legal services only for companies or also for individuals?",
+      "content": "We provide comprehensive legal services for both companies and individuals alike."
+    },
+    {
+      "label": "What are your working hours?",
+      "content": "Our office is open from Sunday to Thursday, from 9:00 AM to 5:00 PM, excluding public holidays."
+    },
+    {
+      "label": "Do you handle international legal cases?",
+      "content": "Yes, our legal team is experienced in handling international cases and cross-border legal matters."
+    },
+    {
+      "label": "Can I get an online legal consultation?",
+      "content": "Yes, you can request an online consultation via video call or email for your convenience."
+    }
+  ]
   },
     "contact": {
     "title": "Contact Us",
