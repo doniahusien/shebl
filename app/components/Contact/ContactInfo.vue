@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row w-full md:w-full h-full self-start justify-between pt-10 gap-20 md:gap-50 md:py-10 pb-20 items-center"
+    class="flex flex-row w-full h-full self-start justify-between pt-10 gap-10 md:gap-50 md:py-10 pb-20 items-center"
   >
     <div class="flex flex-col gap-2 justify-center items-center">
       <BaseHeading
@@ -8,7 +8,7 @@
         classes="text-dark-gray text-4xl"
       />
       <BaseParagraph :title="$t('contact.company_subtitle')" classes="text-soft-gray" />
-      <ContactList />
+      <ContactList  />
     </div>
     <div :class="['hidden md:block relative -bottom-20 overflow-hidden w-1/2 h-auto']">
       <NuxtImg
