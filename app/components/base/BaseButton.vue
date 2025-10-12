@@ -1,11 +1,13 @@
 <template>
   <button
     :class="[
-      'font-din rounded-xl px-2 py-2 w-40 md:w-auto md:rounded-4xl md:px-5 md:py-4 flex items-center justify-center gap-2 ',
+      'font-din rounded-xl px-2 py-2 w-40 md:w-auto md:rounded-4xl md:px-5 md:py-3 flex items-center justify-center gap-2 ',
       classes,
     ]"
   > 
-  {{ text }}
+     <span class="flex items-center align-middle mb-2 text-center">
+      {{ text }}
+    </span>
     <BaseIcon
       src="/icons/arrow-left.svg"
       wrapperClass="w-8 h-8 bg-mist-white/30"
