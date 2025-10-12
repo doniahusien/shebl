@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center p-2 text-gray-basic gap-2 rounded-2xl bg-off-white/20"
+    class="flex items-center text-sm font-semibold p-3 w-[280px] shadow-sm text-gray-basic gap-2 rounded-2xl bg-off-white/20"
   >
     <BaseIcon iconClass="w-5 h-5" :src="srcImg" :alt="value" />
     <span>{{ value }}</span>
