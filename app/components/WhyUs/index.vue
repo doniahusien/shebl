@@ -1,0 +1,22 @@
+<template>
+  <BaseOverlayImage
+    srcImg="bg-[url('/images/header2.jpg')]"
+    classes="bg-navy-overlay rounded-3xl"
+  >
+    <div class="relative z-20 space-y-10 container mx-auto text-center">
+      <BaseHeading :title="$t('whyUs.title')" classes="text-4xl" />
+      <BaseParagraph
+        :title="$t('whyUs.description')"
+        classes="max-w-2xl mx-auto text-center text-base text-light-gray"
+      />
+      <WhyUsStats />
+      <div class="mt-14 flex justify-center">
+        <BaseButton
+          :text="$t('whyUs.button')"
+          class="bg-btns text-white font-din px-6 py-3 rounded-full transition-all duration-300"
+        />
+      </div>
+    </div>
+  </BaseOverlayImage>
+</template>
+
