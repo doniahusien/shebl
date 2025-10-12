@@ -5,7 +5,7 @@
     bgImage="bg-[url('/images/contactheader.jpg')]"
   />
 
-  <div class="px-20">
+  <div class="px-20 pt-20">
   <ContactInfo/>
   </div>
 </template>
