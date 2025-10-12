@@ -22,7 +22,10 @@
   --color-black: rgb(0, 0, 0);                     /* maintitle, contact-title, card-title */
   --color-dark-gray: rgb(25, 25, 25);              /* about-text, contact-title-center */
   --color-gray-basic: rgb(51, 51, 51);                   /* contact-card-title */
+  --color-gray-darken:rgba(26, 51, 72, 1);
+
   --color-medium-gray: rgb(102, 102, 102);         /* highlight-text */
+  --color-basic-gray: rgb(128, 128, 128);    
   --color-light-gray: rgb(153, 153, 153);          /* why-sub, footer-subtitle */
   --color-soft-gray: rgb(179, 179, 179);           /* about-sub, notes, services-sub, etc. */
   --color-pale-gray: rgb(204, 204, 204);           /* banner-200 */
@@ -33,6 +36,7 @@
   --color-white: rgb(255, 255, 255);               /* titles, icons, sections */
   --color-navy-overlay: rgba(0, 28, 52, 0.9);      /* faq-bg-layout */
   --color-faded-white: rgba(255, 255, 255, 0.1);  /* faq-btn-bg */
+  --color-faded: rgba(255, 255, 255, 0.7);  /* faq-btn-bg */
   --color-gold: rgb(193, 152, 119);                /* faq-btn-text */
   --color-gold-dark: #CC966A;                      /* gradient start */
   --color-gold-light: #D39A6B;                     /* gradient end */
@@ -102,7 +106,14 @@
 .font-din {
   font-family: var(--font-din);
 }
-
+.glassy{
+background: rgba(255, 255, 255, 0.13);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.3px);
+-webkit-backdrop-filter: blur(7.3px);
+border: 1px solid rgba(255, 255, 255, 0.17);
+}
 .bg-banner{
   background:var(--gradient-banner) ;
 }
