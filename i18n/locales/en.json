@@ -149,6 +149,26 @@
     "description": "Learn about our vision and mission that we strongly believe in. Discover the story behind the founding of our firm and the legal journey that made us one of the leading law offices. We work with dedication to achieve justice and serve our clients.",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions"
+  },
+  "goals": {
+    "title": "Our Goals",
+    "description": "Shibl Legal aims to provide a comprehensive legal platform that enables users to access legal services easily and professionally. The main goals of the company include:",
+    "points": {
+      "access": "Empowering users to search and quickly access services",
+      "experience": "Achieving a smooth and efficient user experience",
+      "management": "Providing an integrated management system for administration",
+      "services": "Offering specialized legal services",
+      "trust": "Enhancing communication and building trust with clients"
+    }
+  },
+  
+  "coreValues": {
+    "title": "Core Values",
+    "description": "Professionalism and transparency in dealing with clients, innovation in providing digital legal solutions, offering precise and reliable legal services, and building long-term relationships through continuous support."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "Our vision is to become the leading digital legal platform partner in the region by facilitating access to legal services and strengthening trust between clients and users."
   }
 
 }
