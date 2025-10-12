@@ -1,5 +1,5 @@
 <template>
-  <section class="relative flex justify-center items-center py-20 bg-mist-white">
+  <section class="relative flex flex-col md:flex-row justify-center items-center py-20 bg-mist-white">
     <NuxtImg
       src="/images/vision.svg"
       quality="80"
@@ -8,7 +8,7 @@
     />
 
     <div
-      class="absolute bottom-[150px] left-1/3 -translate-x-1/2 backdrop-blur-md bg-faded rounded-2xl shadow-md p-10 w-[480px] text-base text-center "
+      class="md:absolute bottom-[150px] left-1/3 md:-translate-x-1/2 backdrop-blur-md bg-faded rounded-2xl shadow-md p-10 w-full md:w-[480px] text-base text-center "
     >
      <span class=" font-serif absolute right-5 top-5 text-gold opacity-60 text-5xl select-none"
         >”</span

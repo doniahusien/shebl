@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-mist-white py-16 px-6 md:px-10 text-center">
+  <section class="bg-mist-white py-16 px-2 md:px-10 text-center">
     <div class="relative bg-white rounded-xl shadow-md p-16  mx-auto overflow-hidden">
       
       <NuxtImg

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-mist-white flex flex-col md:flex-row gap-10 w-full px-20 mx-auto items-stretch py-10"
+    class="bg-mist-white flex flex-col md:flex-row gap-10 w-full  px-10 md:px-20 mx-auto items-stretch py-10"
   >
     <div class="flex-1 rounded-2xl bg-cream">
       <NuxtImg
@@ -30,7 +30,7 @@
           v-for="key in points"
           :key="key"
           :title="$t(`goals.points.${key}`)"
-          classes="text-basic-gray text-base "
+          classes="text-basic-gray text-base relative pl-4 before:content-['•'] before:absolute before:-right-3 before:text-basic-gray"
         />
       </div>
     </div>

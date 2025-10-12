@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex gap-16 font-din">
+  <ul class="flex md:gap-16 font-din">
     <li v-for="item in items" :key="item.to">
       <NuxtLink :to="item.to">
         {{ item.label }}
