@@ -1,12 +1,18 @@
 <script setup>
 const { t, tm, locale } = useI18n();
+defineProps({
+  showBtn:{
+    type: Boolean,
+    default:true
 
+  }
+})
 </script>
 
 <template>
   <section
     :class="[
-      'flex flex-wrap-reverse md:flex-nowrap items-center px-12 bg-mist-white relative pt-30 md:pt-0',
+      'flex flex-wrap-reverse md:flex-nowrap items-center px-12 bg-mist-white relative pt-10 md:pt-0',
     ]"
   >
     <div class="flex flex-col flex-wrap gap-5">
@@ -16,9 +22,9 @@ const { t, tm, locale } = useI18n();
         classes="text-base text-soft-gray"
       />
 
-      <Features/>
+      <AboutUsFeatures/>
       <AboutUsLegalServices />
-      <div>
+      <div v-if="showBtn">
         <BaseButton :text="$t('about.button')" />
       </div>
     </div>
