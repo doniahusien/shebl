@@ -28,5 +28,112 @@
     },
     "footer": "A wide range of legal services",
     "button": "Learn More About Us"
+  },
+  "whyUs": {
+    "title": "Why Us",
+    "description": "We stand out with experience, integrity, and full commitment to serving our clients. With us, you will receive legal solutions delivered with unmatched professionalism and expertise.",
+    "stats": {
+      "clients": {
+        "number": "200+",
+        "text": "Legal cases successfully handled for our valued clients"
+      },
+      "satisfiedClients": {
+        "number": "90+",
+        "text": "Satisfied clients with our service"
+      },
+      "years": {
+        "number": "6+",
+        "text": "Years of experience"
+      },
+      "team": {
+        "number": "10+",
+        "text": "Team of certified lawyers"
+      }
+    },
+    "button": "Book Your Legal Consultation"
+  },
+   "services": {
+    "title": "Our Services",
+    "description": "At “Shibl Legal,” we offer a comprehensive range of legal services tailored to meet our clients’ needs. Whether you are an individual seeking legal advice or a company looking for complete legal support, we are here to be your trusted legal partner.",
+    "items": {
+      "defense": {
+        "title": "Pleading and Defense",
+        "description": "Our legal team represents clients before courts and various judicial authorities to protect their rights and achieve justice."
+      },
+      "contracts": {
+        "title": "Contract Drafting",
+        "description": "We assist in preparing and drafting all types of contracts to protect your legal rights and serve your interests."
+      },
+      "representation": {
+        "title": "Judicial Representation",
+        "description": "We represent our clients in all legal proceedings and complex cases to ensure a smooth and effective legal process."
+      },
+      "consulting": {
+        "title": "Legal Consultations",
+        "description": "We provide precise and reliable legal advice to help you make the right decisions in personal or business matters."
+      },
+      "company": {
+        "title": "Company Formation",
+        "description": "We provide company formation services and prepare all the required legal documents to start your business correctly and lawfully."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "view_all": "View All",
+    "items": [
+      {
+        "label": "What legal services does Shell Legal Company provide?",
+        "content": "We offer a wide range of legal services including legal consultations, contract drafting, court representation, company formation, commercial arbitration, and judicial execution."
+      },
+      {
+        "label": "How can I contact the Shell Legal team?",
+        "content": "You can contact us via email, phone, or by using the contact form on our website."
+      },
+      {
+        "label": "How can I book a legal consultation?",
+        "content": "You can book a legal consultation through our website by selecting a convenient time for you."
+      },
+      {
+        "label": "Do you provide legal services only for companies or also for individuals?",
+        "content": "We provide comprehensive legal services for both companies and individuals alike."
+      }
+    ]
+  },
+    "contact": {
+    "title": "Contact Us",
+    "description": "We’re here to help! Get in touch with us via phone or email, or visit our office. You can also use the interactive map to locate us accurately.",
+    "company_name": "Shebl Law Firm",
+    "company_subtitle": "Your Trusted Legal Partner",
+    "info": [
+       {
+        "label": "Email",
+        "value": "Sheblforlawfirmgmail.com",
+        "icon": "mail"
+      },
+      {
+        "label": "Phone",
+        "value": "+966 18637 1873",
+        "icon": "phone"
+      },
+     
+      {
+        "label": "Working Hours",
+        "value": "Daily from 08:00 AM to 04:00 PM",
+        "icon": "clock"
+      },
+      {
+        "label": "Address",
+        "value": "Riyadh, Saudi Arabia",
+        "icon": "location"
+      }
+    ]
+  },
+  "footer": {
+    "title": "Shebl Law Firm",
+    "description": "Learn about our vision and mission that we strongly believe in. Discover the story behind the founding of our firm and the legal journey that made us one of the leading law offices. We work with dedication to achieve justice and serve our clients.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
   }
+
 }
