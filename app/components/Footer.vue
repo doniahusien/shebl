@@ -4,8 +4,8 @@
   >
     <div class="absolute inset-0 bg-[#001C34E5] z-[1]"></div>
     <UContainer class="flex flex-col gap-4 relative z-[2]">
-      <div class="flex flex-row md:flex-row md:items-center gap-1">
-        <UILogo classes="w-28 h-28" />
+      <div class="flex flex-col md:flex-row md:items-center gap-1">
+        <UILogo classes="w-16 h-16 md:w-28 md:h-28" />
         <div class="flex flex-col max-w-md">
           <h2 class="text-2xl font-din font-bold">{{ $t("footer.title") }}</h2>
           <p class="text-sm text-light-gray">

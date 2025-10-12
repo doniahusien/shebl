@@ -4,12 +4,12 @@
     :subtitle="t('about.subtitle')"
     bgImage="bg-[url('/images/aboutheader.jpg')]"
   />
-  <AboutUs :showBtn="false"/>
-  <AboutUsGoals/>
+  <AboutUs :showBtn="false" />
+  <AboutUsGoals />
   <div class="py-20 bg-mist-white">
-  <WhyUs/>
+    <WhyUs />
   </div>
-   <div>
+  <div>
     <AboutUsCoreValuesSection />
     <AboutUsVisionSection />
   </div>
