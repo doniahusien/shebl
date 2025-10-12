@@ -9,7 +9,7 @@ const { t } = useI18n();
   > -->
   <BaseOverlayImage
     srcImg="bg-[url('/images/header1.jpg')] w-full min-h-screen pt-50"
-    classes="bg-navy-overlay "
+    classes="bg-banner "
   >
     <div class="z-10 flex flex-col gap-8 px-12 max-w-5xl">
       <BaseParagraph
