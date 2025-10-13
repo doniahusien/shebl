@@ -13,7 +13,7 @@
       <BaseIcon
         :src="`/icons/highlight${n}.svg`"
         :alt="`Highlight${n}`"
-        wrapperClass="w-10 h-10 md:w-14 md:h-14 bg-cream"
+        wrapperClass="w-10 h-10 md:w-14 md:h-14 bg-cream rotate-0"
         iconClass=" w-5 h-5 md:w-8 md:h-8"
       />
       <BaseParagraph

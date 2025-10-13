@@ -1,7 +1,10 @@
 <template>
-  <button @click="toggleLocale" class="flex items-center gap-1">
-    <span>{{ locale == "en" ? "AR" : "EN" }}</span>
+  <button
+    @click="toggleLocale"
+    class="flex justify-center items-center gap-1 cursor-pointer"
+  >
     <NuxtImg src="/icons/langIcon.svg" alt="lang" class="w-5" />
+    <span>{{ locale == "en" ? "AR" : "EN" }}</span>
   </button>
 </template>
 <script setup>

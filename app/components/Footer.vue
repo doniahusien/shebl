@@ -34,7 +34,7 @@
           >
             <BaseIcon
               :src="social.icon"
-              wrapperClass="w-8 h-8 "
+              wrapperClass="w-8 h-8 rotate-0 "
               iconClass="w-5 h-5"
             />
           </NuxtLink>
