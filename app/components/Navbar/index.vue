@@ -45,14 +45,21 @@
 </template>
 
 <script setup>
+const route = useRoute();
 const isOpen = ref(false);
 const toggle = () => {
   isOpen.value = !isOpen.value;
 };
 const isScrolled = ref(false);
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 700;
+
+ const handleScroll = () => {
+  const y = window.scrollY;
+  const isHome = route.fullPath === '/';
+  isScrolled.value = isHome ? y > 700 : y > 450;
+
 };
 onMounted(() => window.addEventListener("scroll", handleScroll));
 onUnmounted(() => window.removeEventListener("scroll", handleScroll));
+
+
 </script>

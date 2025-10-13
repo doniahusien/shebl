@@ -1,12 +1,11 @@
 <script setup>
 const { t, tm, locale } = useI18n();
 defineProps({
-  showBtn:{
+  showBtn: {
     type: Boolean,
-    default:true
-
-  }
-})
+    default: true,
+  },
+});
 </script>
 
 <template>
@@ -22,10 +21,12 @@ defineProps({
         classes="text-base text-soft-gray"
       />
 
-      <AboutUsFeatures/>
+      <AboutUsFeatures />
       <AboutUsLegalServices />
       <div v-if="showBtn">
-        <BaseButton :text="$t('about.button')" />
+        <NuxtLink to="/about" class="cursor-pointer">
+          <BaseButton :text="$t('about.button')" />
+        </NuxtLink>
       </div>
     </div>
     <div :class="['relative w-[955px] md:translate-y-50 md:mb-50 h-[558px]']">
