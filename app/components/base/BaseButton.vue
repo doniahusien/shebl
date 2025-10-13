@@ -1,7 +1,7 @@
 <template>
   <button
     :class="[
-      'font-din flex items-center justify-center gap-2 rounded-xl px-2 py-2 w-full sm:w-40 md:w-auto md:rounded-4xl md:px-5 md:py-3 flex-wrap text-center',
+      'font-din cursor-pointer flex items-center justify-center gap-2 rounded-xl px-2 py-2 w-full sm:w-40 md:w-auto md:rounded-4xl md:px-5 md:py-3 flex-wrap text-center',
       classes,
     ]"
   > 

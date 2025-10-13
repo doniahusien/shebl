@@ -37,7 +37,9 @@
     </div>
     <div class="hidden md:flex justify-center gap-5">
       <UILocaleSwitcher />
+      <NuxtLink to ="/contact">
       <BaseButton v-if="isScrolled" :text="$t('hero.button')" />
+      </NuxtLink>
     </div>
   </nav>
 </template>

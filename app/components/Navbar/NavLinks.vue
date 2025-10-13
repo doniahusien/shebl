@@ -1,6 +1,6 @@
 <template>
   <ul class=" hidden md:flex gap-16 font-din">
-    <li v-for="item in items" :key="item.to">
+    <li v-for="item in items" :key="item.to" class="hover:text-gold">
       <NuxtLink :to="item.to">
         {{ item.label }}
       </NuxtLink>
@@ -9,7 +9,7 @@
 
   <div v-if="isOpen" class=" py-5 px-5 text-2xl absolute top-full left-0 bg-white text-black shadow-lg rounded min-h-screen w-full z-50 font-din">
    <ul>
-    <li v-for="item in items" :key="item.to" class="flex gap-20">
+    <li v-for="item in items" :key="item.to" class="flex gap-20 hover:text-gold ">
       <NuxtLink :to="item.to" class="py-4">
         {{ item.label }}
       </NuxtLink>
