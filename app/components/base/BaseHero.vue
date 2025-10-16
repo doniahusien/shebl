@@ -5,6 +5,9 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  bgClass: {
+    type:String
+  },
  
   title: {
     type: String,
@@ -27,7 +30,8 @@ const props = defineProps({
 
 <template>
   <BaseOverlayImage
-    :srcImg="`${bgImage} w-full ${height}`"
+    :srcImg="bgImage"
+    :bgClass="`w-full ${height}`"
     :classes="`bg-banner ${classes}`"
   >
     <div class="flex flex-col justify-center items-center pt-50 text-center">

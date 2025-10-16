@@ -1,18 +1,22 @@
 <script setup>
-const {t}= useI18n()
+const { t } = useI18n();
+const { data: faq, pending, error } = await useAsyncData("faq", () =>
+  useGlobalFetch("/preview/faq")
+);
 </script>
 
 <template>
-
-    <BaseHero :title="t('faq.title')"
-    :subtitle="t('faq.subtitle')"
-    bgImage="bg-[url('/images/header4.jpg')]"
+  <BaseHero
+    :title="faq.data.banner.title"
+    :subtitle="faq.data.banner.description"
+    :bgImage="faq.data.banner.image"
   />
-    <div class="text-black p-5 md:p-20"> 
-      <FAQAccordion 
-      :indices="[0,1,2,3,4,5,6]"
-      contenStyle="text-black" 
-      labelStyle="text-black"/>
-    </div>
- 
+  <div class="text-black p-5 md:p-20">
+    <FAQAccordion
+      v-if="!pending && faq?.data?.faq?.length"
+      :faq="faq.data.faq"
+      contenStyle="text-black"
+      labelStyle="text-black"
+    />
+  </div>
 </template>

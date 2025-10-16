@@ -1,10 +1,15 @@
 <script setup>
 const { t } = useI18n();
+defineProps({
+  info:{
+    type:Object
+  }
+})
 </script>
 
 <template>
   <section class="flex flex-col flex-wrap md:flex-nowrap pt-20 px-10 md:px-16 gap-5">
-    <ContactHeading />
+    <ContactHeading :info="info"/>
     <ContactInfo/>
   </section>
 </template>

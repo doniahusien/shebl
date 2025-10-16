@@ -7,17 +7,17 @@
       :class="{
         'md:border-l border-gray-200': n == 1 || n == 2,
       }"
-      v-for="n in 3"
+      v-for="n in highlight"
       :key="n"
     >
       <BaseIcon
-        :src="`/icons/highlight${n}.svg`"
+        :src="n.icon"
         :alt="`Highlight${n}`"
         wrapperClass="w-10 h-10 md:w-14 md:h-14 bg-cream rotate-0"
         iconClass=" w-5 h-5 md:w-8 md:h-8"
       />
       <BaseParagraph
-        :title="$t(`highlight.highlight${n}`)"
+        :title="n.value"
         classes="text-medium-gray text-sm font-semibold md:text-base"
       />
     </div>
@@ -25,5 +25,9 @@
 </template>
 
 <script setup>
-
+defineProps({
+  highlight: {
+    type:Array,
+  }
+})
 </script>

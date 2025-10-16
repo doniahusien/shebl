@@ -1,6 +1,6 @@
 <template>
   <BaseOverlayImage
-    srcImg="bg-[url('/images/header4.jpg')] p-10"
+    srcImg="/images/header4.jpg"
     classes="bg-navy-overlay rounded-4xl"
   >
     <div class="flex justify-between z-30 pt-5 px-0">
@@ -11,11 +11,16 @@
     </div>
 
     <section class="relative z-20">
-      <FAQAccordion />
+      <FAQAccordion :faq="faq"/>
     </section>
   </BaseOverlayImage>
 </template>
 
 <script setup>
 const { t, locale } = useI18n();
+defineProps({
+  faq: {
+    type: Array,
+  }
+})
 </script>

@@ -3,6 +3,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
+  runtimeConfig: {
+    public: {
+      baseURL: 'http://shebl9.azmy.aait-d.com/api/client',
+      general:"http://shebl9.azmy.aait-d.com/api"
+    }
+  },
   app: {
     head: {
       title:"shebl",

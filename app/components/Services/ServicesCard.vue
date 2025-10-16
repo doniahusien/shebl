@@ -4,7 +4,7 @@
   >
     <div
       class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"
-      :style="{ backgroundImage: `url('/images/header2.jpg')` }"
+      :style="{ backgroundImage: `url('${img}')` }"
     ></div>
 
     <div
@@ -50,6 +50,9 @@ defineProps({
   icon: {
     type: String,
   },
+  img: {
+    type:String
+  }
 });
 </script>
 

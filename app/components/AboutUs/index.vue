@@ -5,6 +5,9 @@ defineProps({
     type: Boolean,
     default: true,
   },
+  about: {
+    type:Object,
+  }
 });
 </script>
 
@@ -15,13 +18,13 @@ defineProps({
     ]"
   >
     <div class="flex flex-col flex-wrap gap-2 md:gap-5">
-      <BaseHeading :title="$t('about.title')" classes="text-black text-4xl" />
+      <BaseHeading :title="about.title" classes="text-black text-4xl" />
       <BaseParagraph
-        :title="$t('about.description')"
+        :title="about.description"
         classes="text-base text-soft-gray"
       />
 
-      <AboutUsFeatures />
+      <AboutUsFeatures :features="about.features"/>
       <AboutUsLegalServices />
       <div v-if="showBtn">
         <NuxtLink to="/about" class="cursor-pointer">
@@ -33,7 +36,7 @@ defineProps({
       <NuxtImg
         format="webp"
         quality="40"
-        src="/images/aboutImg.svg"
+        :src="about.image"
         alt="Decorative Frame"
         class="object-contain w-full h-full"
       />

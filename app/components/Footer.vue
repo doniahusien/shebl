@@ -9,7 +9,7 @@
         <div class="flex flex-col max-w-md">
           <h2 class="text-2xl font-din font-bold">{{ $t("footer.title") }}</h2>
           <p class="text-sm text-light-gray">
-            {{ $t("footer.description") }}
+            {{ data.data.footer_description }}
           </p>
         </div>
       </div>
@@ -27,9 +27,9 @@
         </div>
         <div class="flex gap-4">
           <NuxtLink
-            v-for="(social, index) in socialLinks"
+            v-for="(social, index) in contactItems"
             :key="index"
-            :to="social.href"
+            :to="social.value"
             class="flex justify-center items-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition"
           >
             <BaseIcon
@@ -45,12 +45,50 @@
 </template>
 
 <script setup>
-const socialLinks = [
+/* const socialLinks = [
   { icon: "/icons/whats.svg", href: "#" },
   { icon: "/icons/x.svg", href: "#" },
   { icon: "/icons/insta.svg", href: "#" },
   { icon: "/icons/face.svg", href: "#" },
 ];
+ */
+const { data, pending, error } = await useAsyncData("data", () =>
+  useGlobalFetch("/preview")
+);
+const { data: info } = await useAsyncData("info", () =>
+  useGlobalFetch("/preview/social")
+);
+
+const contactItems = computed(() => {
+  const items = info.value?.data || []
+
+  const map = {
+    whatsapp: "/icons/whats.svg",
+    phone: "/icons/whats.svg", 
+    x: "/icons/x.svg",
+    instagram: "/icons/insta.svg",
+    facebook: "/icons/face.svg",
+  }
+
+  return items
+    .filter((item) => Object.keys(map).includes(item.key))
+    .map((item) => {
+      let value = item.value
+
+      if (item.key === "whatsapp" || item.key === "phone") {
+        const phone = value.replace(/\D/g, "")
+        value = `https://wa.me/${phone}`
+      }
+
+      return {
+        value,
+        icon: map[item.key],
+      }
+    })
+})
+
+
+
 </script>
 
 <style scoped>

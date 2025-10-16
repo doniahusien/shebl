@@ -10,7 +10,7 @@
       <BaseParagraph :title="$t('contact.company_subtitle')" classes="text-soft-gray" />
       <ContactList  />
     </div>
-    <div :class="['hidden lg:block relative -bottom-20 overflow-hidden w-1/2 h-auto']">
+    <div :class="['hidden lg:block relative -bottom-20 overflow-hidden w-full h-auto']">
       <NuxtImg
         format="webp"
         quality="50"

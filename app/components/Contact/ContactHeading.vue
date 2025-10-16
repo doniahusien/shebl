@@ -1,10 +1,15 @@
 <script setup>
 const { t } = useI18n()
+defineProps({
+  info:{
+    type:Object
+  }
+})
 </script>
 <template>
   <div>
-    <BaseHeading :title="$t('contact.title')" />
-    <BaseParagraph :title="$t('contact.description')" classes="text-soft-gray" />
+    <BaseHeading :title="info.title" />
+    <BaseParagraph :title="info.description" classes="text-soft-gray" />
   </div>
 </template>
 

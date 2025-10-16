@@ -10,17 +10,25 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { data: info, pending, error } = await useAsyncData("info", () =>
+  useGlobalFetch("/preview/social")
+)
 
-const contactItems = ref([])
+const contactItems = computed(() => {
 
-onMounted(() => {
-  const base = 'contact.info'
-  const indices = [0, 1, 2, 3]
+  const items = info.value.data
+  const map = {
+    phone: "phone",
+    email: "email",
+    appoitnments: "appoitnments",
+    address: "address",
+  }
 
-  contactItems.value = indices.map((i) => ({
-    value: t(`${base}[${i}].value`),
-    icon: t(`${base}[${i}].icon`),
-  }))
+  return items
+    .filter((item) => Object.keys(map).includes(item.key))
+    .map((item) => ({
+      value: item.value,
+      icon: map[item.key],
+    }))
 })
 </script>

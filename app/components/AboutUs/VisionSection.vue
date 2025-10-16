@@ -1,10 +1,10 @@
 <template>
   <section class="relative flex flex-col md:flex-row justify-center items-center py-20 bg-mist-white">
     <NuxtImg
-      src="/images/vision.svg"
+      :src="vision.image"
       quality="80"
       alt="Vision"
-      class="w-[300px] md:w-[560px] max-w-full"
+      class="w-full max-w-full"
     />
 
     <div
@@ -15,7 +15,7 @@
       >
 
       <p class="text-base text-gray-darken font-din ">
-        {{ $t("vision.description") }}
+        {{vision.description}}
       </p>
  
        <span class=" font-serif absolute left-4 bottom-0 text-gold opacity-60 text-5xl select-none"
@@ -27,4 +27,9 @@
 
 <script setup>
 const { t } = useI18n();
+defineProps({
+  vision:{
+    type:Object
+  }
+})
 </script>
