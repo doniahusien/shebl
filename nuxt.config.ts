@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   runtimeConfig: {
     public: {
-      baseURL: 'http://shebl9.azmy.aait-d.com/api/client',
-      general:"http://shebl9.azmy.aait-d.com/api"
+      baseURL: 'https://shebl9.azmy.aait-d.com/api/client',
+      general:"https://shebl9.azmy.aait-d.com/api"
     }
   },
   app: {
