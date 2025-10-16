@@ -1,8 +1,6 @@
 <template>
   <UILoader v-if="pending" />
-  <div v-else-if="error" class="text-center py-10 text-red-600">
-    <p>{{ error.message }}</p>
-  </div>
+  <UIError v-else-if="error" :error="error"/>
   <div v-else>
     <section class="relative" >
       <Banner :hero="home?.data.banner" />
@@ -24,6 +22,7 @@
 const { data: home, pending, error } = await useAsyncData("home", () =>
   useGlobalFetch("/preview")
 );
+
 
 const sections = computed(() => home.value?.data?.sections || []);
 const faq = computed(() => home.value?.data?.faq || []);

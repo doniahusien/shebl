@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-const { data: info, pending, error } = await useAsyncData("info", () =>
+const { data: info} = await useAsyncData("info", () =>
   useGlobalFetch("/preview/social")
 )
 

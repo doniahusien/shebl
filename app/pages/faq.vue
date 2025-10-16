@@ -1,11 +1,13 @@
 <script setup>
-const { t } = useI18n();
 const { data: faq, pending, error } = await useAsyncData("faq", () =>
   useGlobalFetch("/preview/faq")
 );
 </script>
 
 <template>
+   <UILoader v-if="pending" />
+  <UIError v-else-if="error" :error="error" />
+  <div v-else>
   <BaseHero
     :title="faq.data.banner.title"
     :subtitle="faq.data.banner.description"
@@ -18,5 +20,6 @@ const { data: faq, pending, error } = await useAsyncData("faq", () =>
       contenStyle="text-black"
       labelStyle="text-black"
     />
+  </div>
   </div>
 </template>

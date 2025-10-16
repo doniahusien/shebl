@@ -1,4 +1,7 @@
 <template>
+   <UILoader v-if="pending" />
+  <UIError v-else-if="error" :error="error" />
+  <div v-else>
   <BaseHero
     :title="aboutBanner?.data.banner.title"
     :subtitle="aboutBanner?.data.banner.description"
@@ -15,6 +18,7 @@
   <div>
     <AboutUsCoreValuesSection :core="core" />
     <AboutUsVisionSection :vision="vision" />
+  </div>
   </div>
 </template>
 
