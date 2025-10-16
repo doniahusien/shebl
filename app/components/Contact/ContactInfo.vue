@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-row w-full h-full self-start justify-center lg:justify-between pt-10 gap-10 md:gap-50 md:py-10 pb-20 items-center"
+    class="flex flex-row w-full h-full self-start justify-center lg:justify-between pt-10 gap-10 md:gap-20 md:py-10 pb-20 items-center"
   >
-    <div class="flex flex-col gap-2 justify-center items-center">
+    <div class="flex w-full flex-col gap-2 justify-center items-center">
       <BaseHeading
         :title="$t('contact.company_name')"
         classes="text-dark-gray text-4xl"

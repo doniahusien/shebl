@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-10">
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 mt-10 gap-4">
     <ContactItem
       v-for="(item, i) in contactItems"
       :key="i"

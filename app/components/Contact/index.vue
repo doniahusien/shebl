@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="flex flex-col flex-wrap md:flex-nowrap pt-20 px-10 md:px-16 gap-5">
+  <section class="flex flex-col flex-wrap md:flex-nowrap pt-20 px-5 md:px-10 gap-5">
     <ContactHeading :info="info"/>
     <ContactInfo/>
   </section>
