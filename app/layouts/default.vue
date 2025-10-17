@@ -5,7 +5,7 @@
         <Navbar />
           <UINoInternetConnection v-if="!isOnline" />
           <div v-else>
-            <div class="app_wrapper mt-2" id="app_wrapper">
+            <div class="app_wrapper" id="app_wrapper">
               <slot />
             </div>
           </div>
@@ -51,12 +51,10 @@ useHead({
 onMounted(() => {
   isOnline.value = window.navigator.onLine
   window.addEventListener('online', () => {
-    console.log('Online detected')
     isOnline.value = true
   })
 
   window.addEventListener('offline', () => {
-    console.log('Offline detected')
     isOnline.value = false
   })
 })
