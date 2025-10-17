@@ -17,9 +17,11 @@ watch(faq, (newVal) => {
 
 <template>
   <UILoader v-if="status === 'pending'" />
-  <UINotFound v-if="faq?.value?.status == 'fail'" />
 
-  <template v-if="status === 'success'">
+ <UINotFound v-else-if="error?.statusCode === 404" />
+  <UIBackError v-else-if="error?.statusCode === 500" />
+
+  <template v-else-if="status === 'success'">
   <BaseHero
     :title="faq?.data?.banner?.title"
     :subtitle="faq?.data?.banner?.description"

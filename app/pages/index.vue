@@ -1,9 +1,11 @@
 <template>
-  <UILoader v-if="status === 'pending'" />
-  <UINotFound v-if="home?.value?.status == 'fail'" />
-  <UIBackError v-else-if="error?.value?.statusCode === 500" />
 
-  <template v-if="status === 'success'">
+  <UILoader v-if="status === 'pending'" />
+
+ <UINotFound v-else-if="error?.statusCode === 404" />
+  <UIBackError v-else-if="error?.statusCode === 500" />
+
+  <template v-else-if="status === 'success'">
     <section class="relative">
       <Banner :hero="home?.data?.banner" />
       <div class="absolute bottom-[-4rem] left-1/2 -translate-x-1/2 w-[95%] z-20">
@@ -14,12 +16,12 @@
     <div class="bg-mist-white">
       <WhyUs :why="why" />
     </div>
-
     <Services :services="services" :features="services?.features" />
     <FAQ :faq="faq" />
     <Contact :info="infoData" />
   </template>
 </template>
+
 <script setup>
 const { locale } = useI18n();
 
