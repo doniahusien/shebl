@@ -169,6 +169,17 @@
   "vision": {
     "title": "Our Vision",
     "description": "Our vision is to become the leading digital legal platform partner in the region by facilitating access to legal services and strengthening trust between clients and users."
+  },
+  "TITLES": {
+    "No internet connection": "No internet connection"
+  },
+  "BUTTONS": {
+    "try again": "Try again"
+  },
+  
+  "locale": {
+    "en": "Ar",
+    "ar": "En"
   }
 
 }
