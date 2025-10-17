@@ -29,10 +29,16 @@ defineProps({
     default:true
   }
 })
-const items = [
+const items = computed(()=>
+  [
   { label: $t("nav.contact"), to: "/contact" },
   { label: $t("nav.common"), to: "/faq" },
   { label: $t("nav.services"), to: "/services" },
   { label: $t("nav.about"), to: "/about" },
-];
+]
+
+
+)
+
+
 </script>
