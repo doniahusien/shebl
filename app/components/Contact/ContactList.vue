@@ -10,8 +10,11 @@
 </template>
 
 <script setup>
-const { data: info} = await useAsyncData("info", () =>
-  useGlobalFetch("/preview/social")
+const { locale } = useI18n();
+
+const { data: info } = await useAsyncData("infoContact",
+  () => useGlobalFetch("/preview/social"),
+   { watch: [locale] } 
 )
 
 const contactItems = computed(() => {
