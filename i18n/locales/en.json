@@ -171,7 +171,12 @@
     "description": "Our vision is to become the leading digital legal platform partner in the region by facilitating access to legal services and strengthening trust between clients and users."
   },
   "TITLES": {
-    "No internet connection": "No internet connection"
+    "No internet connection": "No internet connection",
+     "Internal server error": "Internal server error"
+  },
+  
+  "LABELS": {
+    "errorDesc": "Something went wrong on our side. Please try again later or contact support if the issue persists."
   },
   "BUTTONS": {
     "try again": "Try again"
@@ -180,6 +185,9 @@
   "locale": {
     "en": "Ar",
     "ar": "En"
-  }
+  },
+   "somethingWentWrong": "Something went wrong",
+  "pleaseKindlyTryAgain": "Please kindly try again.",
+  "backToHome": "Back to home"
 
 }
