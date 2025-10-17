@@ -3,14 +3,12 @@
     <Body :dir="locale == 'ar' ? 'rtl' : 'ltr'">
       <div class="mb-20 flex min-h-[100vh] flex-col md:mb-0">
         <Navbar />
-        <ClientOnly>
           <UINoInternetConnection v-if="!isOnline" />
           <div v-else>
             <div class="app_wrapper mt-2" id="app_wrapper">
               <slot />
             </div>
           </div>
-        </ClientOnly>
         <Footer class="mt-auto" />
       </div>
     </Body>
@@ -49,9 +47,17 @@ useHead({
       : "Shebl Law Firm",
 });
 
+
 onMounted(() => {
-  isOnline.value = window.navigator.onLine;
-  window.addEventListener("online", () => (isOnline.value = true));
-  window.addEventListener("offline", () => (isOnline.value = false));
-});
+  isOnline.value = window.navigator.onLine
+  window.addEventListener('online', () => {
+    console.log('Online detected')
+    isOnline.value = true
+  })
+
+  window.addEventListener('offline', () => {
+    console.log('Offline detected')
+    isOnline.value = false
+  })
+})
 </script>
