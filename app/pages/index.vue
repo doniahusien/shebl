@@ -15,19 +15,30 @@
 
     <Services :services="services" :features="services.features" />
     <FAQ :faq="faq" />
-    <Contact :info="info" />
+    <Contact :info="infoData" />
   </div>
 </template>
 <script setup>
-const { data: home, pending, error } = await useAsyncData("home", () =>
-  useGlobalFetch("/preview")
-);
+const { locale } = useI18n()
 
+const { data: home, pending, error } = await useAsyncData(
+  'homeData', 
+  () => useGlobalFetch("/preview"),
+  { watch: [locale] } 
+)
 
-const sections = computed(() => home.value?.data?.sections || []);
-const faq = computed(() => home.value?.data?.faq || []);
-const about = computed(() => sections.value.find((s) => s.type == "about"));
-const why = computed(() => sections.value.find((s) => s.type == "why_us"));
-const services = computed(() => sections.value.find((s) => s.type == "our_services"));
-const info = computed(() => sections.value.find((s) => s.type == "contact_info"));
+const sections = computed(() => home.value?.data?.sections || [])
+const faq = computed(() => home.value?.data?.faq || [])
+const about = computed(() => sections.value.find((s) => s.type == "about"))
+const why = computed(() => sections.value.find((s) => s.type == "why_us"))
+const services = computed(() => sections.value.find((s) => s.type == "our_services"))
+const infoData = computed(() => sections.value.find((s) => s.type == "contact_info"))
+watch(home, (newVal) => {
+  if (newVal?.data?.banner) {
+    useDynamicMeta({
+      description: newVal.data.banner.description,
+      image: newVal.data.banner.image,
+    })
+  }
+})
 </script>
