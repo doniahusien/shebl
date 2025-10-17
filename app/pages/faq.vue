@@ -1,7 +1,18 @@
-<script setup>
-const { data: faq, pending, error } = await useAsyncData("faq", () =>
-  useGlobalFetch("/preview/faq")
+<script setup lang="ts">
+const { locale } = useI18n();
+
+const { data: faq, pending, error } = await useAsyncData("faq",
+  () => useGlobalFetch("/preview/faq"),
+    { watch: [locale] }
 );
+watch(faq, (newVal) => {
+  if (newVal?.data?.banner) {
+    useDynamicMeta({
+      description: newVal.data.banner.description,
+      image: newVal.data.banner.image,
+    })
+  }
+})
 </script>
 
 <template>
