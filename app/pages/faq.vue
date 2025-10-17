@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
-const { data: faq, pending, error } = await useAsyncData("faq",
+const { data: faq, status, error } = await useAsyncData("faq",
   () => useGlobalFetch("/preview/faq"),
     { watch: [locale] }
 );
@@ -16,9 +16,10 @@ watch(faq, (newVal) => {
 </script>
 
 <template>
-   <UILoader v-if="pending" />
-  <UIError v-else-if="error" :error="error" />
-  <div v-else>
+  <UILoader v-if="status === 'pending'" />
+  <UINotFound v-if="faq?.value?.status == 'fail'" />
+
+  <template v-if="status === 'success'">
   <BaseHero
     :title="faq?.data?.banner?.title"
     :subtitle="faq?.data?.banner?.description"
@@ -26,11 +27,11 @@ watch(faq, (newVal) => {
   />
   <div class="text-black p-5 md:p-20">
     <FAQAccordion
-      v-if="!pending && faq?.data?.faq?.length"
-      :faq="faq.data.faq"
+      v-if=" faq?.data?.faq?.length"
+      :faq="faq?.data?.faq"
       contenStyle="text-black"
       labelStyle="text-black"
     />
   </div>
-  </div>
+ </template>
 </template>

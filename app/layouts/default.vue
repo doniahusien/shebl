@@ -3,12 +3,14 @@
     <Body :dir="locale == 'ar' ? 'rtl' : 'ltr'">
       <div class="mb-20 flex min-h-[100vh] flex-col md:mb-0">
         <Navbar />
-        <UINoInternetConnection v-if="!isOnline" />
-        <div v-else>
+        <ClientOnly>
+          <UINoInternetConnection v-if="!isOnline" />
+          <div v-else>
             <div class="app_wrapper mt-2" id="app_wrapper">
               <slot />
             </div>
-        </div>
+          </div>
+        </ClientOnly>
         <Footer class="mt-auto" />
       </div>
     </Body>

@@ -16,9 +16,9 @@
           {{ $t("pleaseKindlyTryAgain") }}
         </p>
         <div class="flex justify-center mt-5">
-          <nuxt-link :to="localePath('/')" class="base-btn mx-2">
+          <NuxtLink :to="localePath('/')" class="base-btn mx-2">
             {{ $t("Back to home") }}
-          </nuxt-link>
+          </NuxtLink>
         </div>
       </div>
     </div>

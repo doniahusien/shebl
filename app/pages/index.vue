@@ -1,8 +1,10 @@
 <template>
-  <UILoader v-if="pending" />
-  <UIError v-else-if="error" :error="error"/>
-  <div v-else>
-    <section class="relative" >
+  <UILoader v-if="status === 'pending'" />
+  <UINotFound v-if="home?.value?.status == 'fail'" />
+  <UIBackError v-else-if="error?.value?.statusCode === 500" />
+
+  <template v-if="status === 'success'">
+    <section class="relative">
       <Banner :hero="home?.data?.banner" />
       <div class="absolute bottom-[-4rem] left-1/2 -translate-x-1/2 w-[95%] z-20">
         <HighLight :highlight="home?.data?.banner?.features" />
@@ -16,29 +18,29 @@
     <Services :services="services" :features="services?.features" />
     <FAQ :faq="faq" />
     <Contact :info="infoData" />
-  </div>
+  </template>
 </template>
 <script setup>
-const { locale } = useI18n()
+const { locale } = useI18n();
 
-const { data: home, pending, error } = await useAsyncData(
-  'homeData', 
+const { data: home, status, error } = await useAsyncData(
+  "homeData",
   () => useGlobalFetch("/preview"),
-  { watch: [locale] } 
-)
+  { watch: [locale] }
+);
 
-const sections = computed(() => home.value?.data?.sections || [])
-const faq = computed(() => home.value?.data?.faq || [])
-const about = computed(() => sections.value.find((s) => s.type == "about"))
-const why = computed(() => sections.value.find((s) => s.type == "why_us"))
-const services = computed(() => sections.value.find((s) => s.type == "our_services"))
-const infoData = computed(() => sections.value.find((s) => s.type == "contact_info"))
+const sections = computed(() => home.value?.data?.sections || []);
+const faq = computed(() => home.value?.data?.faq || []);
+const about = computed(() => sections.value.find((s) => s.type == "about"));
+const why = computed(() => sections.value.find((s) => s.type == "why_us"));
+const services = computed(() => sections.value.find((s) => s.type == "our_services"));
+const infoData = computed(() => sections.value.find((s) => s.type == "contact_info"));
 watch(home, (newVal) => {
   if (newVal?.data?.banner) {
     useDynamicMeta({
       description: newVal.data.banner.description,
       image: newVal.data.banner.image,
-    })
+    });
   }
-})
+});
 </script>

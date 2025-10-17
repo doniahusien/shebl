@@ -1,5 +1,5 @@
 <template>
-   <UILoader v-if="pending" />
+  <UILoader v-if="pending" />
   <UIError v-else-if="error" :error="error" />
   <div v-else>
       <BaseHero

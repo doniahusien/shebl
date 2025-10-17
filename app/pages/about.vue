@@ -1,7 +1,7 @@
 <template>
-  <UILoader v-if="pending" />
-  <UIError v-else-if="error" :error="error" />
-  <div v-else>
+  <UILoader v-if="status === 'pending'" />
+
+  <template v-if="status === 'success'">
     <BaseHero
       :title="aboutBanner?.data?.banner?.title"
       :subtitle="aboutBanner?.data?.banner?.description"
@@ -19,7 +19,7 @@
       <AboutUsCoreValuesSection :core="core" />
       <AboutUsVisionSection :vision="vision" />
     </div>
-  </div>
+  </template>
 </template>
 
 <script setup lang="ts">
@@ -46,7 +46,7 @@ interface AboutBannerResponse {
   }
 }
 
-const { data: aboutBanner, pending, error } = await useAsyncData<AboutBannerResponse>(
+const { data: aboutBanner, status, error } = await useAsyncData<AboutBannerResponse>(
   'aboutData',
   () => useGlobalFetch('/preview?banner_type=about_banner'),
   { watch: [locale] }

@@ -1,7 +1,9 @@
 <template>
-  <UILoader v-if="pending" />
-  <UIError v-else-if="error" :error="error" />
-  <div v-else>
+  <UILoader v-if="status === 'pending'" />
+  <UINotFound v-if="services?.value?.status == 'fail'" />
+
+  <template v-if="status === 'success'">
+
     <BaseHero
       :title="services?.data?.banner?.title"
       :subtitle="services?.data?.banner?.description"
@@ -11,12 +13,12 @@
     <div class="py-22">
       <ServicesList :services="services?.data?.our_services" />
     </div>
-  </div>
+  </template>
 </template>
 
 <script setup lang="ts">
 const { locale } = useI18n();
-const { data: services, pending, error } = await useAsyncData("services",
+const { data: services, status, error } = await useAsyncData("services",
   () => useGlobalFetch("/preview/our-services"),
     { watch: [locale] }
 );
