@@ -1,20 +1,26 @@
 <template>
-  <div class="flex flex-col items-center justify-center bg-white">
-    <div class="w-full space-y-6 text-center">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-nav-bg pt-24 px-4">
+    <div class="w-full max-w-md text-center space-y-6">
+
       <img
         src="/error.png"
-        alt="connection"
-        class="m-auto"
+        alt="Error illustration"
+        class="mx-auto w-48 h-48 object-contain"
       />
-      <h3 class="text-center text-[44px] font-bold capitalize">
+
+      <h3 class="text-3xl md:text-4xl font-extrabold text-gray-800">
         {{ $t("TITLES.Internal server error") }}
       </h3>
+
       <img
         src="/connection.png"
-        alt="connection"
-        class="w-full"
+        alt="Connection issue"
+        class="mx-auto w-32 h-32 object-contain"
       />
-      <p class="m-auto max-w-[423px]">{{ $t("LABELS.errorDesc") }}</p>
+
+      <p class="text-gray-600 text-base md:text-lg">
+        {{ $t("LABELS.errorDesc") }}
+      </p>
     </div>
   </div>
 </template>
