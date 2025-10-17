@@ -11,10 +11,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title:"shebl",
+      title:"شبل",
     link: [
       { rel: 'icon', type: 'image/png', href: '/logo.png' },
-    ],
+      ],
+    meta:[
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ]
   },},
   modules: ["@nuxt/image", "@nuxt/ui", [
     "@nuxtjs/i18n",
