@@ -15,8 +15,17 @@
 </template>
 
 <script setup lang="ts">
-
-const { data: services, pending, error } = await useAsyncData("services", () =>
-  useGlobalFetch("/preview/our-services")
+const { locale } = useI18n();
+const { data: services, pending, error } = await useAsyncData("services",
+  () => useGlobalFetch("/preview/our-services"),
+    { watch: [locale] }
 );
+watch(services, (newVal) => {
+  if (newVal?.data?.banner) {
+    useDynamicMeta({
+      description: newVal.data.banner.description,
+      image: newVal.data.banner.image,
+    })
+  }
+})
 </script>
