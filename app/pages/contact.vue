@@ -13,8 +13,19 @@
   </div>
   </div>
 </template>
-<script setup>
-const { data: contact, pending, error } = await useAsyncData("contact", () =>
-  useGlobalFetch("/preview?banner_type=contact_banner")
+<script setup lang="ts">
+const { locale } = useI18n();
+const { data: contact, pending, error } = await useAsyncData("contact", 
+  () => useGlobalFetch("/preview?banner_type=contact_banner"),
+    { watch: [locale] }
 );
+
+watch(contact, (newVal) => {
+  if (newVal?.data?.banner) {
+    useDynamicMeta({
+      description: newVal.data.banner.description,
+      image: newVal.data.banner.image,
+    })
+  }
+})
 </script>
