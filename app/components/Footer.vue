@@ -52,12 +52,16 @@
   { icon: "/icons/face.svg", href: "#" },
 ];
  */
-const { data, pending, error } = await useAsyncData("data", () =>
-  useGlobalFetch("/preview")
+const { locale } = useI18n();
+const { data, pending, error } = await useAsyncData("desc", () =>
+  useGlobalFetch("/preview"),
+   { watch: [locale] } 
 );
 const { data: info } = await useAsyncData("info", () =>
-  useGlobalFetch("/preview/social")
+  useGlobalFetch("/preview/social"),
+   { watch: [locale] } 
 );
+
 
 const contactItems = computed(() => {
   const items = info.value?.data || []
