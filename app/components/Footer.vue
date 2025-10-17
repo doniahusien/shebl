@@ -1,5 +1,5 @@
 <template>
-  <footer
+  <footer v-if="data"
     class="relative px-5 py-16 gap-10 text-white bg-cover bg-center bg-[url('/images/header4.jpg')]"
   >
     <div class="absolute inset-0 bg-[#001C34E5] z-[1]"></div>

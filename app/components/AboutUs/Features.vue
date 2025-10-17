@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-4 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-4 mt-10" v-if="features">
         <div
           v-for="(feature,i) in features"
           :key="i"
@@ -17,7 +17,8 @@
 const { t, tm, locale } = useI18n();
 defineProps({
   features: {
-    type:Array
+    type: Array,
+    default:()=>[]
   }
 })
 /* 

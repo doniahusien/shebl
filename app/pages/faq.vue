@@ -20,9 +20,9 @@ watch(faq, (newVal) => {
   <UIError v-else-if="error" :error="error" />
   <div v-else>
   <BaseHero
-    :title="faq.data.banner.title"
-    :subtitle="faq.data.banner.description"
-    :bgImage="faq.data.banner.image"
+    :title="faq?.data?.banner?.title"
+    :subtitle="faq?.data?.banner?.description"
+    :bgImage="faq?.data?.banner?.image"
   />
   <div class="text-black p-5 md:p-20">
     <FAQAccordion

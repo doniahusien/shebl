@@ -4,14 +4,17 @@ const props = defineProps({
   bgImage: {
     type: String,
     required: true,
+    default:""
   },
   bgClass: {
-    type:String
+    type: String,
+    default:""
   },
  
   title: {
     type: String,
     required: true,
+    default:""
   },
   subtitle: {
     type: String,

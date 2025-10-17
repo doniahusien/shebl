@@ -27,7 +27,8 @@
 <script setup>
 defineProps({
   highlight: {
-    type:Array,
+    type: Array,
+        default: () => ([])
   }
 })
 </script>

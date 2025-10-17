@@ -21,6 +21,7 @@ const { t, locale } = useI18n();
 defineProps({
   faq: {
     type: Array,
+        default: () => ([])
   }
 })
 </script>

@@ -33,6 +33,7 @@ defineProps({
   why: {
     type: Object,
     required: false, 
+     default: () => ({})
   },
 });
 </script>

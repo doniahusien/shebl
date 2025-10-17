@@ -6,7 +6,8 @@ defineProps({
     default: true,
   },
   about: {
-    type:Object,
+    type: Object,
+    default: () => ({})
   }
 });
 </script>

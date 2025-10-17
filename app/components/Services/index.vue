@@ -20,9 +20,11 @@ const { t } = useI18n();
 defineProps({
   services: {
     type: Object,
+    default: () => ({})
   },
   features: {
-    type: Array,
+    type: Array, 
+        default: () => ([])
   },
 });
 </script>

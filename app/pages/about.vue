@@ -12,7 +12,7 @@
     <AboutUsGoals :goals="goals" />
 
     <div class="py-20 bg-mist-white">
-      <WhyUs :why="why" />
+      <WhyUs :why="why" v-if="why" />
     </div>
 
     <div>

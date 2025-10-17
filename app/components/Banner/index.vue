@@ -3,6 +3,7 @@ const { t } = useI18n();
 defineProps({
   hero: {
     type: Object,
+        default: () => ({})
   }
 })
 </script>
@@ -12,11 +13,13 @@ defineProps({
     :class="['min-h-screen w-full bg-cover bg-center bg-no-repeat flex items-center']"
     style="background-image: url('/header1.jpg')"
   > -->
-  <BaseOverlayImage
-    :srcImg="hero.image"
-    bgClass=" w-full min-h-screen pt-32 md:pt-50"
-    classes="bg-banner "
-  >
+   <div v-if="hero">
+<BaseOverlayImage
+  :srcImg="hero?.image || '/images/header2.jpg'"
+  bgClass="w-full min-h-screen pt-32 md:pt-50"
+  classes="bg-banner"
+  v-if="hero"
+>
     <div class="z-10 flex flex-col gap-4 md:gap-8 px-5 md:px-12 max-w-5xl">
       <BaseParagraph
         :title="$t('hero.badge')"
@@ -41,4 +44,5 @@ defineProps({
       </div>
     </div>
   </BaseOverlayImage>
+  </div>
 </template>

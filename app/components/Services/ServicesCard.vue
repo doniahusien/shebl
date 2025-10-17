@@ -42,10 +42,12 @@ defineProps({
   title: {
     type: String,
     required: true,
+    default:""
   },
   description: {
     type: String,
     required: true,
+    default:""
   },
   icon: {
     type: String,

@@ -18,7 +18,8 @@
 defineProps({
   services: {
     type: Array,
-    required: true
+    required: true,
+        default: () => ([])
   }
 })
 </script>

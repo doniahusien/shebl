@@ -3,9 +3,9 @@
   <UIError v-else-if="error" :error="error" />
   <div v-else>
       <BaseHero
-    :title="contact?.data.banner.title"
-    :subtitle="contact?.data.banner.description"
-    :bgImage="contact?.data.banner.image"
+    :title="contact?.data?.banner?.title"
+    :subtitle="contact?.data?.banner?.description"
+    :bgImage="contact?.data?.banner?.image"
   />
 
   <div class="px-20 pt-20">

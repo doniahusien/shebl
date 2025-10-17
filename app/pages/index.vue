@@ -3,9 +3,9 @@
   <UIError v-else-if="error" :error="error"/>
   <div v-else>
     <section class="relative" >
-      <Banner :hero="home?.data.banner" />
+      <Banner :hero="home?.data?.banner" />
       <div class="absolute bottom-[-4rem] left-1/2 -translate-x-1/2 w-[95%] z-20">
-        <HighLight :highlight="home?.data.banner.features" />
+        <HighLight :highlight="home?.data?.banner?.features" />
       </div>
     </section>
     <AboutUs :about="about" />
@@ -13,7 +13,7 @@
       <WhyUs :why="why" />
     </div>
 
-    <Services :services="services" :features="services.features" />
+    <Services :services="services" :features="services?.features" />
     <FAQ :faq="faq" />
     <Contact :info="infoData" />
   </div>
