@@ -4,7 +4,7 @@
   >
     <div
       class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"
-      :style="{ backgroundImage: `url('${img}')` }"
+      :style="{ backgroundImage: `url('${img || '/images/header2.jpg'}')` }"
     ></div>
 
     <div
