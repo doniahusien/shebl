@@ -20,7 +20,7 @@ export const useGlobalFetch = async <T = any>(
     });
   }
   catch (error: any) {
-    console.error(error)
+    console.error(error);
+    throw error;
   }
-
 };
