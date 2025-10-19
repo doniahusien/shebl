@@ -1,10 +1,12 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
-const { data: faq, status, error } = await useAsyncData("faq",
-  () => useGlobalFetch("/preview/faq"),
-    { watch: [locale] }
-);
+const { data: faq, status, error } = await useAsyncData<ApiResponse<FAQResponse>>(
+  "faq",
+  () => useGlobalFetch<ApiResponse<FAQResponse>>("/preview/faq"),
+  { watch: [locale] }
+)
+
 watch(faq, (newVal) => {
   if (newVal?.data?.banner) {
     useDynamicMeta({

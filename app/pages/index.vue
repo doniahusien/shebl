@@ -22,14 +22,14 @@
   </template>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { locale } = useI18n();
 
-const { data: home, status, error } = await useAsyncData(
+const { data: home, status, error } = await useAsyncData<ApiResponse<HomeResponse>>(
   "homeData",
-  () => useGlobalFetch("/preview"),
+  () => useGlobalFetch<ApiResponse<HomeResponse>>("/preview"),
   { watch: [locale] }
-);
+)
 
 const sections = computed(() => home.value?.data?.sections || []);
 const faq = computed(() => home.value?.data?.faq || []);

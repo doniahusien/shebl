@@ -20,16 +20,20 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
-const { data: services, status, error } = await useAsyncData("services",
-  () => useGlobalFetch("/preview/our-services"),
-    { watch: [locale] }
+
+const { data: services, status, error } = await useAsyncData<ApiResponse<ServicesResponse>>(
+  "services",
+  () => useGlobalFetch<ApiResponse<ServicesResponse>>("/preview/our-services"),
+  { watch: [locale] }
 );
+
 watch(services, (newVal) => {
   if (newVal?.data?.banner) {
     useDynamicMeta({
       description: newVal.data.banner.description,
       image: newVal.data.banner.image,
-    })
+    });
   }
-})
+});
 </script>
+
