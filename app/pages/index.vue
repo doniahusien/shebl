@@ -1,24 +1,23 @@
 <template>
-
   <UILoader v-if="status === 'pending'" />
 
- <UINotFound v-else-if="error?.statusCode === 404" />
+  <UINotFound v-else-if="error?.statusCode === 404" />
   <UIBackError v-else-if="error?.statusCode === 500" />
 
   <template v-else-if="status === 'success'">
-    <section class="relative">
+    <section>
       <Banner :hero="home?.data?.banner" />
-      <div class="absolute bottom-[-4rem] left-1/2 -translate-x-1/2 w-[95%] z-20">
+      <div class="relative z-10 -translate-y-16 container mx-auto">
         <HighLight :highlight="home?.data?.banner?.features" />
       </div>
     </section>
-    <AboutUs :about="about" />
-    <div class="bg-mist-white">
+    <div class="space-y-28">
+      <AboutUs :about="about" />
       <WhyUs :why="why" />
+      <Services :services="services" :features="services?.features" />
+      <FAQ :faq="faq" />
+      <Contact :info="infoData" />
     </div>
-    <Services :services="services" :features="services?.features" />
-    <FAQ :faq="faq" />
-    <Contact :info="infoData" />
   </template>
 </template>
 
@@ -29,7 +28,7 @@ const { data: home, status, error } = await useAsyncData<ApiResponse<HomeRespons
   "homeData",
   () => useGlobalFetch<ApiResponse<HomeResponse>>("/preview"),
   { watch: [locale] }
-)
+);
 
 const sections = computed(() => home.value?.data?.sections || []);
 const faq = computed(() => home.value?.data?.faq || []);
