@@ -1,16 +1,19 @@
 <script setup>
 const { t } = useI18n();
 defineProps({
-  info:{
+  info: {
     type: Object,
-    default: () => ({})
-  }
-})
+    default: () => ({}),
+  },
+});
 </script>
 
 <template>
-  <section class="flex flex-col flex-wrap md:flex-nowrap pt-20 px-5 md:px-10 gap-5">
-    <ContactHeading :info="info"/>
-    <ContactInfo/>
+  <section class="container mx-auto space-y-12">
+    <div>
+      <h2 class="text-4xl lg:text-3xl text-black font-ya">{{ info.title }}</h2>
+      <p class="text-soft-gray">{{ info.description }}</p>
+    </div>
+    <ContactInfo />
   </section>
 </template>

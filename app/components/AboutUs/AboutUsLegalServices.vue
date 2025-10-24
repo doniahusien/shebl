@@ -1,6 +1,6 @@
 <template>
-  <div :class="['flex items-center gap-3 py-10 flex-row']">
-        <div class="flex -space-x-3">
+  <div class="flex items-center gap-3 py-10 flex-row">
+      <div class="flex -space-x-3">
       <NuxtImg
         v-for="(image, i) in images"
         :key="i"
@@ -12,6 +12,9 @@
         quality="70"
       />
     </div>
+     <p class="text-soft-gray text-base"> 
+      {{$t("about.footer")}}
+      </p>
    <!--  <div class="img-container">
     <UAvatarGroup size="xl">
       <UAvatar v-for="(image, i) in images" :src="image" :key="i" :alt="`image${i}`" />

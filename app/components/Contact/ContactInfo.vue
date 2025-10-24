@@ -1,16 +1,17 @@
 <template>
   <div
-    class="flex flex-row w-full h-full self-start justify-center lg:justify-between pt-10 gap-10 md:gap-20 md:py-10 pb-20 items-center"
+    class="grid grid-cols-1 gap-5 md:grid-cols-2 items-center container mx-auto"
   >
-    <div class="flex w-full flex-col gap-2 justify-center items-center">
-      <BaseHeading
-        :title="$t('contact.company_name')"
-        classes="text-dark-gray text-4xl"
-      />
-      <BaseParagraph :title="$t('contact.company_subtitle')" classes="text-soft-gray" />
+    <div class="order-2 md:order-1 flex w-full flex-col gap-2 justify-center items-center">
+      <h3
+        class="text-dark-gray font-bold font-ya text-4xl">
+        {{ $t('contact.company_name') }}
+      </h3>
+      <p class="text-soft-gray">
+        {{ $t('contact.company_subtitle') }}</p> 
       <ContactList  />
     </div>
-    <div :class="['hidden lg:block relative -bottom-20 overflow-hidden w-full h-auto']">
+    <div class="order-1 md:order-2">
       <NuxtImg
         format="webp"
         quality="50"

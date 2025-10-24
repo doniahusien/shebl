@@ -4,14 +4,14 @@
     :items="formattedFaq"
     multiple
     :ui="{
-      label: `text-lg font-semibold font-din ${labelStyle}`,
-      content: `text-base font-din ${contentStyle}`,
-      trigger: 'flex items-center justify-between py-3',
+      label: `text-lg font-semibold ${labelStyle}`,
+      content: `text-base text-start ${contentStyle}`,
+      trigger: 'flex justify-between py-3',
     }"
   >
     <template #default="{ item, index }">
-      <div class="flex items-center gap-2 mt-10 mb-5">
-        <span :class="['font-bold text-2xl', labelStyle]">{{ index + 1 }}.</span>
+      <div class="flex items-center  gap-2 mt-10 mb-5">
+        <span class="font-bold text-2xl" :class="labelStyle">{{ index + 1 }}.</span>
         <span>{{ item.label }}</span>
       </div>
     </template>
@@ -23,7 +23,7 @@
     </template>
   </UAccordion>
 
-  <div v-else class="text-center py-10 text-gray-500">
+  <div v-else class=" py-10 text-gray-500">
     No FAQs available.
   </div>
 </template>

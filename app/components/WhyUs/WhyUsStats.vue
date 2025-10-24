@@ -5,31 +5,27 @@
       :key="item.id || index"
       class="flex flex-col items-center relative"
     >
-      <div class="relative inline-block">
+      <div class="relative">
         <h3 class="text-6xl font-bold text-gold">
           {{ item.value }}
         </h3>
 
-        <BaseIcon
-          :src="item.icon"
-          wrapperClass="w-8 h-8 bg-gray absolute -bottom-4 -right-3 backdrop-blur-md"
-          iconClass="w-5 h-5"
-        />
+        <div class="absolute bottom-0 right-0 translate-x-5 translate-y-1">
+          <BaseIcon
+            :src="item.icon"
+            wrapperClass="w-8 h-8 bg-gray/70 backdrop-blur-md rounded-full flex justify-center items-center"
+            iconClass="w-5 h-5"
+          />
+        </div>
       </div>
 
-      <BaseParagraph
-        :title="item.key"
-        classes="text-sm mt-5 text-soft-gray text-center"
-      />
+      <p class="text-sm mt-5 text-soft-gray text-center">{{ item.key }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  features: {
-    type: Array,
-    required: true,
-  },
+  features: Array,
 });
 </script>

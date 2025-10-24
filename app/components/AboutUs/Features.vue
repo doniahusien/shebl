@@ -6,10 +6,9 @@
           class="flex flex-row gap-5 "
         >
           <BaseIcon :src="feature.icon" iconClass="w-8 h-8" />
-          <BaseParagraph
-            :title="feature.value"
-            classes="text-dark-gray font-bold text-sm"
-          />
+          <p class="text-dark-gray font-bold text-sm">
+          {{feature.value}}
+          </p>
         </div>
       </div>
 </template>

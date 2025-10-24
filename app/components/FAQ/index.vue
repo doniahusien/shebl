@@ -1,19 +1,30 @@
 <template>
-  <BaseOverlayImage
-    srcImg="/images/header4.jpg"
-    classes="bg-navy-overlay rounded-4xl"
-  >
-    <div class="flex justify-between z-30 pt-5 px-0">
-      <BaseHeading :title="$t('faq.title')" classes="text-white text-2xl md:text-4xl" />
-      <NuxtLink to="/faq" class="cursor-pointer ">
-        <BaseButton :text="$t('faq.view_all')" classes=" rounded-4xl bg-faded-white backdrop-blur-md" />
-      </NuxtLink>
-    </div>
 
-    <section class="relative z-20">
-      <FAQAccordion :faq="faq"/>
-    </section>
-  </BaseOverlayImage>
+   <div
+    class="relative bg-cover bg-[url('/images/header4.jpg')] bg-center bg-no-repeat container mx-auto rounded-4xl overflow-hidden"
+    >
+    <div class="overlay"></div>
+   <div
+      class="relative z-20 flex flex-col items-center text-center w-full px-10 md:px-24 py-20"
+    >
+      <div
+        class="flex flex-row justify-between items-center w-full gap-6 mb-10"
+      >
+        <h2 class="text-white font-ya text-2xl md:text-4xl">
+          {{ $t('faq.title') }}
+        </h2>
+
+        <NuxtLink to="/faq">
+          <BaseButton
+            :text="$t('faq.view_all')"
+            classes="rounded-4xl bg-faded-white backdrop-blur-md"
+          />
+        </NuxtLink>
+      </div>
+
+        <FAQAccordion :faq="faq" />
+    </div>
+  </div>
 </template>
 
 <script setup>

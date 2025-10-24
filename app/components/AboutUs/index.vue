@@ -7,25 +7,20 @@ defineProps({
   },
   about: {
     type: Object,
-    default: () => ({})
-  }
+    default: () => ({}),
+  },
 });
 </script>
 
 <template>
   <section
-    :class="[
-      'flex flex-wrap-reverse md:flex-nowrap items-center px-5 md:px-12 bg-mist-white relative py-10 md:pt-0',
-    ]"
+    class="grid grid-cols-1 md:grid-cols-3 items-center container mx-auto bg-mist-white"
   >
-    <div class="flex flex-col flex-wrap gap-2 md:gap-5">
-      <BaseHeading :title="about.title" classes="text-black text-4xl" />
-      <BaseParagraph
-        :title="about.description"
-        classes="text-base text-soft-gray"
-      />
+    <div class="col-span-2 order-2 md:order-1 space-y-6">
+    <h2 class="text-black text-4xl font-ya font-bold">{{ $t("about.title") }}</h2>
+    <p class="text-base text-soft-gray" >{{about.description}}</p>
 
-      <AboutUsFeatures :features="about.features"/>
+      <AboutUsFeatures :features="about.features" />
       <AboutUsLegalServices />
       <div v-if="showBtn">
         <NuxtLink to="/about" class="cursor-pointer">
@@ -33,7 +28,7 @@ defineProps({
         </NuxtLink>
       </div>
     </div>
-    <div :class="['relative w-[955px] md:translate-y-50 md:mb-50 h-[558px]']">
+    <div class="order-1 md:order-2">
       <NuxtImg
         format="webp"
         quality="40"

@@ -1,16 +1,19 @@
 <template>
-  <section class="flex flex-col py-30 bg-mist-white">
-    <div :class="['flex flex-col gap-2 mb-10 px-10 md:px-24']">
-      <BaseHeading :title="services.title" classes="text-black text-3xl md:text-4xl" />
-      <div class="w-3/4">
-        <BaseParagraph
-          :title="services.description"
-          classes="text-soft-gray md:text-base"
-        />
+  <section class="py-10 space-y-10">
+    <div class="container mx-auto space-y-10">
+      <div class="space-y-2">
+        <h2 class="text-black font-ya text-3xl md:text-4xl">
+          {{ services.title }}
+        </h2>
+        <div class="w-full md:w-3/4">
+          <p class="text-soft-gray md:text-base">
+            {{ services.description }}
+          </p>
+        </div>
       </div>
-    </div>
 
-    <ServicesList :services="features" />
+      <ServicesList :services="features" />
+    </div>
   </section>
 </template>
 
@@ -20,11 +23,11 @@ const { t } = useI18n();
 defineProps({
   services: {
     type: Object,
-    default: () => ({})
+    default: () => ({}),
   },
   features: {
-    type: Array, 
-        default: () => ([])
+    type: Array,
+    default: () => [],
   },
 });
 </script>
