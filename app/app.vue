@@ -1,9 +1,8 @@
 <template>
-  <div class="bg-white min-h-screen">
+  <div class="bg-mist-white">
     <NuxtLayout>
-        <NuxtPage />
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
-<script setup>
-</script>
+<script setup></script>
