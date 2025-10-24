@@ -43,7 +43,7 @@
   --color-gold-light: #D39A6B;                     /* gradient end */
   --color-gradient-gold: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
   --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
-  --gradient-banner:linear-gradient(180deg, rgba(0, 28, 52, 0.8) 27.28%, rgba(0, 28, 52, 0.4) 100%);
+  --gradient-banner:linear-gradient(180deg, rgba(0, 28, 52, 0.8) 27.28%, rgba(0, 28, 52, 0.7) 100%);
 }
 
 .font-ya {
