@@ -4,7 +4,7 @@
   <UINotFound v-else-if="error?.statusCode === 404" />
   <UIBackError v-else-if="error?.statusCode === 500" />
 
-  <template v-else-if="status === 'success'">
+  <div class="space-y-22 pb-10" v-else-if="status === 'success'">
     <BaseHero
       :title="aboutBanner?.data?.banner?.title"
       :subtitle="aboutBanner?.data?.banner?.description"
@@ -14,15 +14,11 @@
     <AboutUs :showBtn="false" :about="about" />
     <AboutUsGoals :goals="goals" />
 
-    <div class="py-20 bg-mist-white">
-      <WhyUs :why="why" v-if="why" />
-    </div>
+    <WhyUs :why="why" v-if="why" />
 
-    <div>
-      <AboutUsCoreValuesSection :core="core" />
-      <AboutUsVisionSection :vision="vision" />
-    </div>
-  </template>
+    <AboutUsCoreValuesSection :core="core" />
+    <AboutUsVisionSection :vision="vision" />
+  </div>
 </template>
 
 <script setup lang="ts">

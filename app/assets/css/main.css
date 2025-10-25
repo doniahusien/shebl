@@ -82,8 +82,12 @@ button{
 }
 
 @layer base {
-  html, body, * {
+   * {
     @apply font-din;
+  }
+  h2,h1,h3{
+    @apply font-ya;
+
   }
 }
 

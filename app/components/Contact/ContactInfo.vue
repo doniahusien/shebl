@@ -4,7 +4,7 @@
   >
     <div class="order-2 md:order-1 flex w-full flex-col gap-2 justify-center items-center">
       <h3
-        class="text-dark-gray font-bold font-ya text-4xl">
+        class="text-dark-gray font-bold text-4xl">
         {{ $t('contact.company_name') }}
       </h3>
       <p class="text-soft-gray">

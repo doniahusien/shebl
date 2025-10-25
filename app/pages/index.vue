@@ -11,7 +11,7 @@
         <HighLight :highlight="home?.data?.banner?.features" />
       </div>
     </section>
-    <div class="space-y-28">
+    <div class="space-y-28 pb-5">
       <AboutUs :about="about" />
       <WhyUs :why="why" />
       <Services :services="services" :features="services?.features" />

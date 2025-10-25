@@ -37,7 +37,7 @@ const props = defineProps({
   >
     <div class="overlay"></div>
     <div class="relative z-10 container mx-auto space-y-5 text-center">
-      <h2 class="text-white font-ya text-6xl md:text-7xl">
+      <h2 class="text-white  text-6xl md:text-7xl">
         {{ title }}
       </h2>
       <p class="text-silver-gray text-lg text-center">{{ subtitle }}</p>

@@ -11,7 +11,7 @@ defineProps({
 <template>
   <section class="container mx-auto space-y-12">
     <div>
-      <h2 class="text-4xl lg:text-3xl text-black font-ya">{{ info.title }}</h2>
+      <h2 class="text-4xl lg:text-3xl text-black">{{ info.title }}</h2>
       <p class="text-soft-gray">{{ info.description }}</p>
     </div>
     <ContactInfo />

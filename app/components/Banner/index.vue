@@ -25,7 +25,7 @@ defineProps({
         </p>
 
         <h1
-          class="text-mist-white font-ya text-3xl md:text-6xl lg:text-7xl font-bold mt-3"
+          class="text-mist-white text-3xl md:text-6xl lg:text-7xl font-bold mt-3"
         >
           {{ hero.title }}
         </h1>

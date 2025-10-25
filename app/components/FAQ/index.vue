@@ -10,7 +10,7 @@
       <div
         class="flex flex-row justify-between items-center w-full gap-6 mb-10"
       >
-        <h2 class="text-white font-ya text-2xl md:text-4xl">
+        <h2 class="text-white text-2xl md:text-4xl">
           {{ $t('faq.title') }}
         </h2>
 

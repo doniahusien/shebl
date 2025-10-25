@@ -2,7 +2,7 @@
   <section class="py-10 space-y-10">
     <div class="container mx-auto space-y-10">
       <div class="space-y-2">
-        <h2 class="text-black font-ya text-3xl md:text-4xl">
+        <h2 class="text-black text-3xl md:text-4xl">
           {{ services.title }}
         </h2>
         <div class="w-full md:w-3/4">

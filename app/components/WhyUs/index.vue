@@ -6,7 +6,7 @@
     <div class="overlay"></div>
 
     <div class="relative z-20 space-y-10 w-full text-center">
-      <h2 class="text-4xl font-ya font-bold">{{ why.title }}</h2>
+      <h2 class="text-4xl font-bold">{{ why.title }}</h2>
       <p class="max-w-2xl mx-auto text-center text-base text-light-gray">
         {{ why.description }}
       </p>

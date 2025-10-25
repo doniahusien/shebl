@@ -1,35 +1,30 @@
 <template>
-  <div class="flex items-center gap-3 py-10 flex-row">
+  <div class="container mx-auto px-4">
+    <div class="flex gap-5 items-center">
       <div class="flex -space-x-3">
-      <NuxtImg
-        v-for="(image, i) in images"
-        :key="i"
-        :src="image"
-        alt="legal"
-        width="48"
-        height="48"
-        class="rounded-full border-2 border-white shadow object-cover"
-        quality="70"
-      />
-    </div>
-     <p class="text-soft-gray text-base"> 
-      {{$t("about.footer")}}
+        <NuxtImg
+          v-for="(image, i) in images"
+          :key="i"
+          :src="image"
+          alt="legal"
+          width="48"
+          height="48"
+          class="rounded-full border-2 border-white shadow object-cover relative z-[i]"
+          quality="70"
+        />
+      </div>
+
+      <p class="text-soft-gray text-base ml-4">
+        {{ $t("about.footer") }}
       </p>
-   <!--  <div class="img-container">
-    <UAvatarGroup size="xl">
-      <UAvatar v-for="(image, i) in images" :src="image" :key="i" :alt="`image${i}`" />
-    </UAvatarGroup>
-    <BaseParagraph :title="$t('about.footer')" classes="text-soft-gray text-base" />
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script setup>
-const images = ["/images/legal1.png", "/images/legal2.png", "/images/legal3.png"];
+const images = [
+  "/images/legal1.png",
+  "/images/legal2.png",
+  "/images/legal3.png",
+];
 </script>
-
-<style>
-.ring-bg {
-  ring: 0 !important;
-}
-</style>

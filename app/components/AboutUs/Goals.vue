@@ -1,8 +1,9 @@
 <template>
+    <div class="container mx-auto px-4">
   <div
-    class="bg-mist-white flex flex-col md:flex-row gap-10 w-full px-10 md:px-20 mx-auto items-stretch py-10"
+    class=" grid grid-cols-1 md:grid-cols-3 items-center gap-10 "
   >
-    <div class="flex-1 rounded-2xl bg-cream">
+    <div class="col-span-1 rounded-2xl bg-cream">
       <NuxtImg
         :src="goals.image"
         quality="50"
@@ -11,28 +12,26 @@
       />
     </div>
 
-    <div class="flex-[2] flex flex-col p-10 rounded-2xl bg-cream space-y-5">
+    <div class="col-span-2 p-10 rounded-2xl bg-cream space-y-5">
       <BaseIcon
         :src="goals.icon"
         wrapperClass="w-16 h-16"
         iconClass="w-8 h-8"
       />
 
-      <BaseHeading :title="goals.title" classes="text-black text-4xl" />
+      <h2 class="text-black  font-bold text-4xl" >{{goals.title}}</h2>
 
-      <BaseParagraph
-        :title="goals.description"
-        classes="text-basic-gray text-base"
-      />
+      <p class="text-basic-gray text-base">{{goals.description}}</p>
+    
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        <BaseParagraph
+        <p
           v-for="(item,i) in goals.features"
           :key="i"
-          :title="item.value"
-          classes="text-basic-gray text-base relative pl-4 before:content-['•'] before:absolute before:-right-3 before:text-basic-gray"
-        />
+          class="text-basic-gray text-base relative pl-4 before:content-['•'] before:absolute before:-right-3 before:text-basic-gray"
+        >{{item.value}} </p>
       </div>
+    </div>
     </div>
   </div>
 </template>

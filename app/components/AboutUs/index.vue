@@ -17,7 +17,7 @@ defineProps({
     class="grid grid-cols-1 md:grid-cols-3 items-center container mx-auto bg-mist-white"
   >
     <div class="col-span-2 order-2 md:order-1 space-y-6">
-    <h2 class="text-black text-4xl font-ya font-bold">{{ $t("about.title") }}</h2>
+    <h2 class="text-black text-4xl font-bold">{{ $t("about.title") }}</h2>
     <p class="text-base text-soft-gray" >{{about.description}}</p>
 
       <AboutUsFeatures :features="about.features" />
