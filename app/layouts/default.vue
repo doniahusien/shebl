@@ -1,19 +1,20 @@
 <template>
-  <Html :lang="locale" :dir="locale == 'ar' ? 'rtl' : 'ltr'">
-    <Body :dir="locale == 'ar' ? 'rtl' : 'ltr'">
-      <div class="mb-20 flex min-h-[100vh] flex-col md:mb-0">
+  <Html :lang="locale" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+    <Body :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+      <div class="flex min-h-screen flex-col">
         <Navbar />
+        <main class="flex-1">
           <UINoInternetConnection v-if="!isOnline" />
-          <div v-else>
-            <div class="app_wrapper" id="app_wrapper">
-              <slot />
-            </div>
+          <div v-else class="app_wrapper" id="app_wrapper">
+            <slot />
           </div>
-        <Footer class="mt-auto" />
+        </main>
+        <Footer />
       </div>
     </Body>
   </Html>
 </template>
+
 
 <script setup>
 const { locale } = useI18n();
