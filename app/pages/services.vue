@@ -5,16 +5,14 @@
   <UIBackError v-else-if="error?.statusCode === 500" />
 
   <template v-else-if="status === 'success'">
-
+  <div class="space-y-22 pb-10">
     <BaseHero
       :title="services?.data?.banner?.title"
       :subtitle="services?.data?.banner?.description"
       :bgImage="services?.data?.banner?.image"
     />
-
-    <div class="py-22">
       <ServicesList :services="services?.data?.our_services" />
-    </div>
+  </div> 
   </template>
 </template>
 

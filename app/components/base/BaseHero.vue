@@ -1,20 +1,19 @@
 <script setup>
-
 const props = defineProps({
   bgImage: {
     type: String,
     required: true,
-    default:""
+    default: "",
   },
   bgClass: {
     type: String,
-    default:""
+    default: "",
   },
- 
+
   title: {
     type: String,
     required: true,
-    default:""
+    default: "",
   },
   subtitle: {
     type: String,
@@ -32,18 +31,16 @@ const props = defineProps({
 </script>
 
 <template>
-  <BaseOverlayImage
-    :srcImg="bgImage"
-    :bgClass="`w-full ${height}`"
-    :classes="`bg-banner ${classes}`"
+  <div
+    class="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
+    :style="{ backgroundImage: `url('${bgImage || '/images/header2.jpg'}')` }"
   >
-    <div class="flex flex-col justify-center items-center pt-50 text-center">
-      <BaseHeading :title="title" classes="text-white text-6xl md:text-7xl" />
-      <BaseParagraph
-        v-if="subtitle"
-        :title="subtitle"
-        classes="text-silver-gray text-base flex items-center justify-center text-center w-full md:w-2/3 font-din mt-4"
-      />
+    <div class="overlay"></div>
+    <div class="relative z-10 container mx-auto space-y-5 text-center">
+      <h2 class="text-white font-ya text-6xl md:text-7xl">
+        {{ title }}
+      </h2>
+      <p class="text-silver-gray text-lg text-center">{{ subtitle }}</p>
     </div>
-  </BaseOverlayImage>
+  </div>
 </template>
