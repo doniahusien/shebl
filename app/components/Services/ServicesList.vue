@@ -6,7 +6,6 @@
       </div>
     </template>
 
-    <template v-else>
       <ServicesCard
         v-for="(service, index) in props.services"
         :key="service.id || index"
@@ -14,9 +13,9 @@
         :description="service.description"
         :icon="service.icon"
         :img="service.background"
+        :style="{ '--stagger-index': index }"
         :class="[index === 3 ? 'lg:col-span-2' : '', 'w-full']"
       />
-    </template>
   </div>
 </template>
 

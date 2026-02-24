@@ -188,6 +188,16 @@
   },
    "somethingWentWrong": "Something went wrong",
   "pleaseKindlyTryAgain": "Please kindly try again.",
-  "backToHome": "Back to home"
-
+  "backToHome": "Back to home",
+  "seo": {
+    "title": "Shebl Law Firm - Professional Legal Services & Consultations",
+    "titleTemplate": "%s | Shebl Law Firm",
+    "description": "Shebl Law Firm provides comprehensive legal services and expert consultations in all fields of law locally and internationally. Our team of certified lawyers is dedicated to protecting your rights and achieving justice.",
+    "keywords": "lawyer, law firm, legal services, legal consultations, attorney, court representation, legal advice, contract drafting, business law, family law",
+    "author": "Ahmed Niazy",
+    "applicationName": "Shebl Law Firm",
+    "ogDescription": "Your trusted legal partner providing specialized and reliable legal services - Shebl Law Firm",
+    "siteName": "Shebl Law Firm",
+    "twitterDescription": "Professional legal services with a team of expert lawyers and specialized consultants"
+  }
 }

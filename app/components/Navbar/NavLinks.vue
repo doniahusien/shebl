@@ -1,7 +1,10 @@
 <template>
   <ul class="hidden md:flex gap-16 font-din">
-    <li v-for="item in items" :key="item.to" class="hover:text-gold">
-      <NuxtLink :to="item.to">
+    <li v-for="item in items" :key="item.to" class="hover:text-gold transition-colors duration-300">
+      <NuxtLink 
+        :to="item.to"
+        :class="isActiveLink(item.to) && 'text-gold font-bold border-b-2 border-gold pb-1'"
+      >
         {{ item.label }}
       </NuxtLink>
     </li>
@@ -15,9 +18,13 @@
       <li
         v-for="item in items"
         :key="item.to"
-        class="flex gap-20 hover:text-gold"
+        class="flex gap-20 hover:text-gold transition-colors duration-300"
       >
-        <NuxtLink :to="item.to" class="py-4">
+        <NuxtLink 
+          :to="item.to" 
+          :class="isActiveLink(item.to) && 'text-gold font-bold border-l-4 border-gold pl-4'"
+          class="py-4"
+        >
           {{ item.label }}
         </NuxtLink>
       </li>
@@ -33,6 +40,8 @@
 <script setup>
 import { useI18n } from 'vue-i18n'      
 import { useLocalePath } from '#i18n'     
+
+const route = useRoute()
 
 defineProps({
   isOpen: {
@@ -50,4 +59,8 @@ const items = computed(() => [
   { label: t('nav.services'), to: localePath('/services') },
   { label: t('nav.about'), to: localePath('/about') },
 ])
+
+const isActiveLink = (linkPath) => {
+  return route.path === linkPath
+}
 </script>

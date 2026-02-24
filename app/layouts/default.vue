@@ -5,7 +5,7 @@
         <Navbar />
         <main class="flex-1">
           <UINoInternetConnection v-if="!isOnline" />
-          <div v-else class="app_wrapper" id="app_wrapper">
+          <div v-else class="app_wrapper animate-fade-in" id="app_wrapper">
             <slot />
           </div>
         </main>
@@ -19,6 +19,7 @@
 <script setup>
 const { locale } = useI18n();
 const isOnline = ref(true);
+useScrollAnimation();
 
 useSeoMeta({
   ogImage: "/logo.png",

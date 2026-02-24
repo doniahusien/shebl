@@ -18,7 +18,6 @@ const { data: contact, status, error } = await useAsyncData<ApiResponse<ContactR
     useGlobalFetch<ApiResponse<ContactResponse>>("/preview?banner_type=contact_banner"),
   { watch: [locale] }
 );
-
 watch(contact, (newVal) => {
   if (newVal?.data?.banner) {
     useDynamicMeta({

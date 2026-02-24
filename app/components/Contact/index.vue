@@ -25,11 +25,13 @@ const props = defineProps({
       </div>
     </section>
   </div>
-  <section v-else class="container px-6 lg:px-2 mx-auto space-y-12">
-    <div>
-      <h2 class="text-4xl lg:text-3xl text-black">{{ props.info.title }}</h2>
-      <p class="text-soft-gray" v-html="props.info.description"></p>
-    </div>
-    <ContactList :loading="props.loading" />
-  </section>
+  <Transition name="fade-up">
+    <section v-if="!props.loading" class="container px-6 lg:px-2 mx-auto space-y-12">
+      <div>
+        <h2 class="text-4xl lg:text-3xl text-black">{{ props.info.title }}</h2>
+        <p class="text-soft-gray" v-html="props.info.description"></p>
+      </div>
+      <ContactList :loading="props.loading" />
+    </section>
+  </Transition>
 </template>

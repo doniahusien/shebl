@@ -5,4 +5,8 @@
     </NuxtLayout>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const { metaTags } = useMetaTags()
+
+useHead(metaTags)
+</script>

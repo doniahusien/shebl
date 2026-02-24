@@ -20,30 +20,48 @@
   --color-nav-bg: rgba(9, 28, 47, 0.2);
   --color-nav-link: rgba(204, 204, 204, 1);
 
-  --color-black: rgb(0, 0, 0);                     /* maintitle, contact-title, card-title */
-  --color-dark-gray: rgb(25, 25, 25);              /* about-text, contact-title-center */
-  --color-gray-basic: rgb(51, 51, 51);                   /* contact-card-title */
-  --color-gray-darken:rgba(26, 51, 72, 1);
+  --color-black: rgb(0, 0, 0);
+  /* maintitle, contact-title, card-title */
+  --color-dark-gray: rgb(25, 25, 25);
+  /* about-text, contact-title-center */
+  --color-gray-basic: rgb(51, 51, 51);
+  /* contact-card-title */
+  --color-gray-darken: rgba(26, 51, 72, 1);
 
-  --color-medium-gray: rgb(102, 102, 102);         /* highlight-text */
-  --color-basic-gray: rgb(128, 128, 128);    
-  --color-light-gray: rgb(153, 153, 153);          /* why-sub, footer-subtitle */
-  --color-soft-gray: rgb(179, 179, 179);           /* about-sub, notes, services-sub, etc. */
-  --color-pale-gray: rgb(204, 204, 204);           /* banner-200 */
-  --color-silver-gray: rgb(229, 229, 229);         /* banner-300 */
-  --color-off-white: rgb(242, 242, 242);           /* faq-label, contact-card-bg */
-  --color-mist-white: rgb(242, 244, 245);          /* banner-heading, btn-bg, highlight-bg */
-  --color-cream: rgb(252, 250, 248);               /* icon-bg, service-card-bg */
-  --color-white: rgb(255, 255, 255);               /* titles, icons, sections */
-  --color-navy-overlay: rgba(0, 28, 52, 0.9);      /* faq-bg-layout */
-  --color-faded-white: rgba(255, 255, 255, 0.1);  /* faq-btn-bg */
-  --color-faded: rgba(255, 255, 255, 0.7);  /* faq-btn-bg */
-  --color-gold: rgb(193, 152, 119);                /* faq-btn-text */
-  --color-gold-dark: #CC966A;                      /* gradient start */
-  --color-gold-light: #D39A6B;                     /* gradient end */
+  --color-medium-gray: rgb(102, 102, 102);
+  /* highlight-text */
+  --color-basic-gray: rgb(128, 128, 128);
+  --color-light-gray: rgb(153, 153, 153);
+  /* why-sub, footer-subtitle */
+  --color-soft-gray: rgb(179, 179, 179);
+  /* about-sub, notes, services-sub, etc. */
+  --color-pale-gray: rgb(204, 204, 204);
+  /* banner-200 */
+  --color-silver-gray: rgb(229, 229, 229);
+  /* banner-300 */
+  --color-off-white: rgb(242, 242, 242);
+  /* faq-label, contact-card-bg */
+  --color-mist-white: rgb(242, 244, 245);
+  /* banner-heading, btn-bg, highlight-bg */
+  --color-cream: rgb(252, 250, 248);
+  /* icon-bg, service-card-bg */
+  --color-white: rgb(255, 255, 255);
+  /* titles, icons, sections */
+  --color-navy-overlay: rgba(0, 28, 52, 0.9);
+  /* faq-bg-layout */
+  --color-faded-white: rgba(255, 255, 255, 0.1);
+  /* faq-btn-bg */
+  --color-faded: rgba(255, 255, 255, 0.7);
+  /* faq-btn-bg */
+  --color-gold: rgb(193, 152, 119);
+  /* faq-btn-text */
+  --color-gold-dark: #CC966A;
+  /* gradient start */
+  --color-gold-light: #D39A6B;
+  /* gradient end */
   --color-gradient-gold: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
   --gradient-btns: linear-gradient(264.73deg, #CC966A 4.98%, #D39A6B 93.5%);
-  --gradient-banner:linear-gradient(180deg, rgba(0, 28, 52, 0.8) 27.28%, rgba(0, 28, 52, 0.7) 100%);
+  --gradient-banner: linear-gradient(180deg, rgba(0, 28, 52, 0.8) 27.28%, rgba(0, 28, 52, 0.7) 100%);
 }
 
 .font-ya {
@@ -53,45 +71,390 @@
 .font-din {
   font-family: var(--font-din);
 }
-.glassy{
-background: rgba(255, 255, 255, 0.13);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(7.3px);
--webkit-backdrop-filter: blur(7.3px);
-border: 1px solid rgba(255, 255, 255, 0.17);
+
+.glassy {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
 }
-.bg-banner{
-  background:var(--gradient-banner) ;
+
+.bg-banner {
+  background: var(--gradient-banner);
 }
 
 .bg-btns {
   background: var(--gradient-btns);
 }
-.bg-btn-white{
-background: var(--faded-white);
+
+.bg-btn-white {
+  background: var(--faded-white);
 }
+
 .text-gold {
   background: var(--gradient-btns);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-button{
-  font-family:var(--font-din) ;
+
+button {
+  font-family: var(--font-din);
 }
 
 @layer base {
-   * {
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
     @apply font-din;
   }
-  h2,h1,h3{
-    @apply font-ya;
 
+  h2,
+  h1,
+  h3 {
+    @apply font-ya;
+  }
+
+  /* Smooth transitions for all elements */
+  *:not(svg):not(path) {
+    @apply transition-all duration-300;
   }
 }
 
 @utility overlay {
-  @apply absolute inset-0 bg-cover backdrop-blur-sm z-[1] ;
+  @apply absolute inset-0 bg-cover backdrop-blur-sm z-[1];
   background: var(--gradient-banner);
+}
+
+/* Component Transitions */
+
+/* Fade Up Animation */
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(4px);
+}
+
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+  filter: blur(4px);
+}
+
+/* Staggered Items Transition */
+.stagger-items-enter-active {
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: calc(var(--stagger-index, 0) * 0.12s);
+}
+
+.stagger-items-enter-from {
+  opacity: 0;
+  transform: translateX(-30px) scale(0.8);
+  filter: blur(4px);
+}
+
+.stagger-items-move {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Staggered Cards Transition */
+.stagger-cards-enter-active {
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: calc(var(--stagger-index, 0) * 0.15s);
+}
+
+.stagger-cards-enter-from {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  filter: blur(4px);
+}
+
+.stagger-cards-move {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Smooth Page Load Animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Button Animations */
+button {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+button:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(193, 152, 119, 0.3);
+}
+
+button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(193, 152, 119, 0.2);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+button:hover::before {
+  opacity: 1;
+}
+
+/* Link Animations */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-gold);
+}
+
+/* Card Hover Effect */
+.card, [class*="card"], div[class*="shadow"], section > div {
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover, [class*="card"]:hover, div[class*="shadow"]:hover {
+  transform: translateY(-8px) rotate(0.5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Icon Animations */
+svg {
+  transition: all 0.3s ease;
+}
+
+button svg:hover,
+a svg:hover {
+  transform: scale(1.1);
+}
+
+/* Section Entrance Animations */
+section {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Main content animation */
+.app_wrapper {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Navbar animation */
+nav {
+  animation: slideInDown 0.5s ease-out;
+}
+
+/* Footer animation */
+footer {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Input Focus Animation */
+input:focus,
+textarea:focus,
+select:focus {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 4px rgba(193, 152, 119, 0.2);
+  border-color: var(--color-gold) !important;
+  transform: scale(1.02);
+}
+
+/* Text Animation on Load */
+h1, h2, h3 {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1:hover, h2:hover, h3:hover {
+  transform: translateX(4px);
+  color: var(--color-gold);
+  text-shadow: 0 4px 8px rgba(193, 152, 119, 0.2);
+}
+
+p {
+  transition: all 0.3s ease;
+}
+
+p:hover {
+  color: var(--color-light-gray);
+}
+
+/* Image Zoom on Hover */
+img {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+img:hover {
+  transform: scale(1.08) rotate(0.5deg);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transform on Scroll - For visible elements */
+.animate-on-scroll {
+  animation: slideInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Loader Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Page Load Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideInDown 0.8s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Main content animation */
+.app_wrapper {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Navbar animation */
+nav {
+  animation: slideInDown 0.7s ease-out;
+}
+
+/* Footer animation */
+footer {
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* Section animations */
+section {
+  animation: slideInUp 0.8s ease-out;
 }
