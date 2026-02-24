@@ -7,7 +7,7 @@
 defineProps({
     classes: {
         type: String,
-        default:"w-12 w-14"
+        default:"w-10 md:w-14 "
     }
 })
 

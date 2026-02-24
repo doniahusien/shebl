@@ -1,20 +1,12 @@
 <template>
-    <UILoader v-if="status === 'pending'" />
-
- <UINotFound v-else-if="error?.statusCode === 404" />
-  <UIBackError v-else-if="error?.statusCode === 500" />
-
-  <template v-else-if="status === 'success'">
-      <BaseHero
+  <BaseHero
     :title="contact?.data?.banner?.title"
     :subtitle="contact?.data?.banner?.description"
     :bgImage="contact?.data?.banner?.image"
+    :loading="status == 'pending'"
   />
 
-  <div class="px-20 pt-20">
-  <ContactInfo/>
-  </div>
-  </template>
+  <ContactInfo :info="contact?.data?.contact_info" :loading="status == 'pending'" />
 </template>
 
 <script setup lang="ts">
@@ -22,7 +14,8 @@ const { locale } = useI18n();
 
 const { data: contact, status, error } = await useAsyncData<ApiResponse<ContactResponse>>(
   "contact",
-  () => useGlobalFetch<ApiResponse<ContactResponse>>("/preview?banner_type=contact_banner"),
+  () =>
+    useGlobalFetch<ApiResponse<ContactResponse>>("/preview?banner_type=contact_banner"),
   { watch: [locale] }
 );
 
@@ -31,7 +24,7 @@ watch(contact, (newVal) => {
     useDynamicMeta({
       description: newVal.data.banner.description,
       image: newVal.data.banner.image,
-    })
+    });
   }
 });
 </script>

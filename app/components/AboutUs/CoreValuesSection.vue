@@ -1,5 +1,8 @@
 <template>
-  <section class="container mx-auto px-4 text-center">
+  <div v-if="loading" class="container mx-auto px-6 lg:px-2 text-center">
+    <BaseSkeleton type="card2" />
+  </div>
+  <section v-else class="container mx-auto px-6 lg:px-2 text-center">
     <div class="relative bg-white rounded-xl shadow-md p-10 md:p-16 mx-auto overflow-hidden">
      
       <NuxtImg
@@ -16,7 +19,7 @@
           iconClass="w-12 h-12"
         />
       </div>
-      <h2 class="text-3xl md:text-4xl text-black font-bold mb-4">
+      <h2 class="text-2xl md:text-4xl text-black font-bold mb-4">
         {{ core.title }}
       </h2>
       <div class="relative mx-auto max-w-2xl">
@@ -26,7 +29,7 @@
           “
         </span>
 
-        <p class="text-base text-medium-gray text-center px-5 font-bold mb-4 leading-relaxed">
+        <p class="text-sm md:text-base text-medium-gray text-center px-0 md:px-5 font-bold mb-4 leading-relaxed">
           {{ core.description }}
         </p>
 
@@ -47,6 +50,10 @@ defineProps({
   core: {
     type: Object,
     required: true,
+  },
+  loading: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>

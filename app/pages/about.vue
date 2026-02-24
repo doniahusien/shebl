@@ -1,29 +1,24 @@
 <template>
-  <UILoader v-if="status === 'pending'" />
 
-  <UINotFound v-else-if="error?.statusCode === 404" />
-  <UIBackError v-else-if="error?.statusCode === 500" />
-
-  <div class="space-y-22 pb-10" v-else-if="status === 'success'">
+  <div class="space-y-22 mb-10" >
     <BaseHero
       :title="aboutBanner?.data?.banner?.title"
       :subtitle="aboutBanner?.data?.banner?.description"
       :bgImage="aboutBanner?.data?.banner?.image"
+      :loading="status == 'pending'"
     />
 
-    <AboutUs :showBtn="false" :about="about" />
-    <AboutUsGoals :goals="goals" />
+    <AboutUs :showBtn="false" :about="about" :loading="status === 'pending'" />
+    <AboutUsGoals :goals="goals" :loading="status === 'pending'" />
+    <WhyUs :why="why" v-if="why" :loading="status === 'pending'" />
 
-    <WhyUs :why="why" v-if="why" />
-
-    <AboutUsCoreValuesSection :core="core" />
-    <AboutUsVisionSection :vision="vision" />
+    <AboutUsCoreValuesSection :core="core" :loading="status === 'pending'" />
+    <AboutUsVisionSection :vision="vision" :loading="status === 'pending'" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import { computed } from "vue";
+
 
 const { t, locale } = useI18n();
 
@@ -45,7 +40,7 @@ interface AboutBannerResponse {
   };
 }
 
-const { data: aboutBanner, status, error } = await useAsyncData<AboutBannerResponse>(
+const { data: aboutBanner, status, error } = await useAsyncData<ApiResponse<AboutBannerResponse>>(
   "aboutData",
   () => useGlobalFetch("/preview?banner_type=about_banner"),
   { watch: [locale] }

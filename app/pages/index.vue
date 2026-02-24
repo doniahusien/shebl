@@ -1,22 +1,20 @@
 <template>
-  <UILoader v-if="status === 'pending'" />
-
-  <UINotFound v-else-if="error?.statusCode === 404" />
+  <UINotFound v-if="error?.statusCode === 404" />
   <UIBackError v-else-if="error?.statusCode === 500" />
 
-  <template v-else-if="status === 'success'">
+  <template v-else>
     <section>
-      <Banner :hero="home?.data?.banner" />
-      <div class="relative z-10 -translate-y-16 container mx-auto">
-        <HighLight :highlight="home?.data?.banner?.features" />
+      <Banner :hero="home?.data?.banner" :loading="status === 'pending'" />
+      <div class="relative z-10 -translate-y-16 container mx-auto px-6 lg:px-2">
+        <HighLight :highlight="home?.data?.banner?.features" :loading="status === 'pending'" />
       </div>
     </section>
-    <div class="space-y-28 pb-5">
-      <AboutUs :about="about" />
-      <WhyUs :why="why" />
-      <Services :services="services" :features="services?.features" />
-      <FAQ :faq="faq" />
-      <Contact :info="infoData" />
+    <div class="space-y-28 mb-5">
+      <AboutUs :about="about" :loading="status === 'pending'" />
+      <WhyUs :why="why" :loading="status === 'pending'" />
+      <Services :services="services" :features="services?.features" :loading="status === 'pending'" />
+      <FAQ :faq="faq" :loading="status === 'pending'" />
+      <Contact :info="infoData" :loading="status === 'pending'" />
     </div>
   </template>
 </template>

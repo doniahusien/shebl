@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative group shadow-lg rounded-3xl p-8 transition-all duration-500 overflow-hidden cursor-pointer w-full h-64 hover:-translate-y-2"
+    class="relative group shadow-lg rounded-3xl p-5 md:p-8 transition-all duration-500 overflow-hidden cursor-pointer w-full h-64 hover:-translate-y-2"
   >
     <div
       class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"

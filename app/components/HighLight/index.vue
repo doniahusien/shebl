@@ -1,7 +1,13 @@
 <template>
-  <div
-    class=" bg-mist-white grid m-auto md:grid-cols-3 w-full shadow-sm rounded-3xl gap-5 md:gap-0 p-4 md:p-6"
-  >
+  <div v-if="props.loading">
+    <div class="bg-mist-white grid m-auto lg:grid-cols-3 w-full shadow-sm rounded-3xl gap-5 p-6">
+      <div v-for="n in 3" :key="n">
+        <BaseSkeleton type="feature" />
+      </div>
+    </div>
+  </div>
+
+  <div v-else class=" bg-mist-white grid m-auto md:grid-cols-3 w-full shadow-sm rounded-3xl gap-5 md:gap-0 p-4 md:p-6">
     <div
       class="flex flex-row gap-5 justify-center items-center"
       :class="{
@@ -25,10 +31,14 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   highlight: {
     type: Array,
-        default: () => ([])
-  }
+    default: () => ([]),
+  },
+  loading: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>

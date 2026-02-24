@@ -1,6 +1,15 @@
 <template>
-  <UILoader v-if="status === 'pending'" />
+   <div v-if="status == 'pending'" class="mb-5">
+    <BaseSkeleton type="hero" class-name="mb-8" />
 
+    <div class="container mx-auto gap-4 mb-5 grid grid-cols-1 lg:grid-cols-3 px-6 lg:px-2">
+      <BaseSkeleton type="card2" />
+      <BaseSkeleton type="card2" />
+      <BaseSkeleton type="card2" />
+      <BaseSkeleton type="card2" />
+      <BaseSkeleton type="card2" class="col-span-1 lg:col-span-2" />
+    </div>
+  </div>
  <UINotFound v-else-if="error?.statusCode === 404" />
   <UIBackError v-else-if="error?.statusCode === 500" />
 

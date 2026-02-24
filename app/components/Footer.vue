@@ -7,10 +7,10 @@
 
     <UContainer class="space-y-10 relative z-10">
 
-      <div class="grid gap-1 md:grid-cols-[auto_1fr] md:items-center">
+      <div class="grid gap-4 md:grid-cols-[auto_1fr] md:items-center">
         <UILogo classes="w-16 h-16 md:w-28 md:h-28" />
         <div>
-          <h2 class="text-2xl font-din font-bold">{{ $t('footer.title') }}</h2>
+          <h2 class="text-lg md:text-2xl font-din font-bold">{{ $t('footer.title') }}</h2>
           <p class="text-sm text-light-gray">
             {{ footerDescription }}
           </p>
@@ -29,7 +29,7 @@
           </NuxtLink>
         </div>
 
-        <div class="grid grid-flow-col auto-cols-max gap-4 justify-self-end">
+        <div class="grid grid-flow-col auto-cols-max mx-auto gap-4 justify-self-end">
           <NuxtLink
             v-for="(social, index) in contactItems"
             :key="index"
