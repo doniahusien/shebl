@@ -22,7 +22,7 @@ const isOnline = ref(true);
 useScrollAnimation();
 
 useSeoMeta({
-  ogImage: "/logo.png",
+  ogImage: "logo.png",
   ogSiteName: locale.value === "ar" ? "شبل" : "Shebl",
   description:
     locale.value === "ar"
@@ -37,7 +37,7 @@ useSeoMeta({
     locale.value === "ar"
       ? "خدمات قانونية احترافية مع نخبة من المحامين والمستشارين."
       : "Professional legal services with a team of expert lawyers and consultants.",
-  twitterImage: "/logo.png",
+  twitterImage: "logo.png",
 });
 
 useHead({

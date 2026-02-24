@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     head: {
       title: "شبل",
       link: [
-        { rel: 'icon', type: 'image/png', href: '/logo.png' },
+        { rel: 'icon', type: 'image/png', href: 'logo.png' },
       ],
       meta: [
         { charset: "utf-8" },
