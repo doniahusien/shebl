@@ -9,7 +9,13 @@ export default defineNuxtConfig({
       general: "https://shebl9.azmy.aait-d.com/api"
     }
   },
- 
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/logo.png' },
+      ],
+    },
+  },
   modules: ["@nuxt/image", "@nuxt/ui", [
     "@nuxtjs/i18n",
     {
